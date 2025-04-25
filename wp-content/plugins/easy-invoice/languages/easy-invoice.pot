@@ -1,0 +1,2142 @@
+# Copyright (C) 2024 MatrixAddons
+# This file is distributed under the GPL2+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Invoice 1.1\n"
+"Report-Msgid-Bugs-To: matrixaddons@gmail.com\n"
+"POT-Creation-Date: 2024-01-19 11:13:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"Last-Translator: matrixaddons <matrixaddons@gmail.com>\n"
+"Language-Team: matrixaddons <matrixaddons@gmail.com>\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: includes/Admin/Addons.php:25
+msgid "Easy Invoice Addons"
+msgstr ""
+
+#: includes/Admin/Addons.php:26
+msgid "Addons"
+msgstr ""
+
+#: includes/Admin/Addons.php:38 includes/Admin/Addons.php:39
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: includes/Admin/Addons.php:97 includes/Admin/Addons.php:98
+msgid "Get Easy Invoice Pro"
+msgstr ""
+
+#: includes/Admin/Addons.php:109
+msgid "Go to Easy Invoice Settings page"
+msgstr ""
+
+#: includes/Admin/Addons.php:110 includes/Admin/Init.php:79
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/Addons.php:126
+msgid "Read the documentation"
+msgstr ""
+
+#: includes/Admin/Addons.php:127
+msgid "Docs"
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:9
+msgid "New invoice {{invoice_number}} available"
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:18
+msgid ""
+"Hi {{client_name}},\n"
+"\t\t\t You have a new invoice available ( {{invoice_number}} ) which can be "
+"viewed at <a href=\"{{invoice_permalink}}\" "
+"target=\"_blank\">{{invoice_number}}</a>."
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:27
+msgid "New quote {{quote_number}} available"
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:36
+msgid ""
+"Hi {{client_name}},\n"
+"\t\t\t You have a new quote available ( {{quote_number}} ) which can be "
+"viewed at <a href=\"{{quote_permalink}}\" "
+"target=\"_blank\">{{quote_number}}</a>."
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:45
+msgid "The New invoice {{invoice_number}} available for {{client_name}}"
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:53
+msgid ""
+"Hi Admin,\n"
+"\t\t\t The New invoice ( {{invoice_number}} ) is ready for {{client_name}} "
+"which can be viewed at <a href=\"{{invoice_permalink}}\" "
+"target=\"_blank\">{{invoice_number}}</a>."
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:62
+msgid "The New quote {{quote_number}} available for {{client_name}}"
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:70
+msgid ""
+"Hi Admin,\n"
+"\t\t\t The New quote ( {{quote_number}} ) is ready for {{client_name}} "
+"which can be viewed at <a href=\"{{quote_permalink}}\" "
+"target=\"_blank\">{{quote_number}}</a>."
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:80
+msgid "Thank you for the payment"
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:89
+msgid ""
+"Hi {{client_name}},\n"
+"\t\t\t Your recent payment for ( {{invoice_number}} ) has been successfully "
+"completed."
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:99
+msgid "{{invoice_number}} has been paid"
+msgstr ""
+
+#: includes/Admin/Emails/DefaultEmailMessages.php:108
+msgid ""
+"Hi Admin,\n"
+"\t\t\t Your have just received payment for invoice ( {{invoice_number}} ) "
+"from {{client_name}}."
+msgstr ""
+
+#: includes/Admin/FieldItems/Group.php:15
+msgid "You cant remove this item. At least one item needed."
+msgstr ""
+
+#: includes/Admin/FieldItems/Group.php:66
+msgid "Sample Title"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/ClientFields.php:14
+#: includes/Admin/Fields/Quotes/ClientFields.php:14
+msgid "Client Email"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/ClientFields.php:18
+#: includes/Admin/Fields/Quotes/ClientFields.php:18
+msgid "Client Name"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/ClientFields.php:22
+#: includes/Admin/Fields/Quotes/ClientFields.php:22
+#: includes/Admin/Settings/BusinessSettings.php:150
+#: includes/Helpers/template.php:152
+msgid "Website URL"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/ClientFields.php:26
+#: includes/Admin/Fields/Quotes/ClientFields.php:26
+msgid "Additional Info"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/CurrencyFields.php:13
+#: includes/Admin/Fields/Quotes/CurrencyFields.php:14
+#: includes/Admin/Settings/PaymentSettings.php:86 includes/Meta/Invoice.php:41
+#: includes/Meta/Quote.php:43
+msgid "Currency"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/CurrencyFields.php:19
+#: includes/Admin/Fields/Quotes/CurrencyFields.php:20
+#: includes/Admin/Settings/PaymentSettings.php:99
+msgid "Currency Symbol"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/DiscountFields.php:15
+#: includes/Admin/Fields/Quotes/DiscountFields.php:15
+#: includes/Admin/Templates/Metabox/LineItems.php:36
+#: includes/Admin/Templates/Metabox/Quote/LineItems.php:36
+#: includes/Helpers/text.php:23
+msgid "Discount"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/DiscountFields.php:20
+#: includes/Admin/Fields/Quotes/DiscountFields.php:20
+msgid "Discount Type"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/DiscountFields.php:23
+#: includes/Admin/Fields/Quotes/DiscountFields.php:23
+msgid "Fixed"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/DiscountFields.php:24
+#: includes/Admin/Fields/Quotes/DiscountFields.php:24
+msgid "Percentage"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/DiscountFields.php:28
+#: includes/Admin/Fields/Quotes/DiscountFields.php:28
+msgid "Calculation Method"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/DiscountFields.php:31
+#: includes/Admin/Fields/Quotes/DiscountFields.php:31
+msgid "Before Tax"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/DiscountFields.php:32
+#: includes/Admin/Fields/Quotes/DiscountFields.php:32
+msgid "After Tax"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/InvoiceFields.php:22
+msgid "Invoice Status"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/InvoiceFields.php:28
+#: includes/Helpers/text.php:11 includes/Hooks/ListTable.php:129
+msgid "Invoice Number"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/InvoiceFields.php:33
+#: includes/Helpers/text.php:12
+msgid "Order Number"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/InvoiceFields.php:37
+#: includes/Admin/Fields/Quotes/QuoteFields.php:32
+msgid "Created Date"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/InvoiceFields.php:42
+#: includes/Helpers/text.php:14 includes/Hooks/ListTable.php:132
+msgid "Due Date"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:18
+#: includes/Admin/Fields/Quotes/LineItemFields.php:21
+msgid "Add New Line Item"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:27
+#: includes/Admin/Fields/Quotes/LineItemFields.php:30
+msgid "Quantity"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:33
+#: includes/Admin/Fields/Quotes/LineItemFields.php:36
+msgid "Item Title"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:39
+#: includes/Admin/Fields/Quotes/LineItemFields.php:42
+msgid "Adjust (%)"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:45
+#: includes/Admin/Fields/Quotes/LineItemFields.php:48
+msgid "Rate"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:50
+#: includes/Admin/Fields/Invoices/PaymentFields.php:41
+#: includes/Admin/Fields/Quotes/LineItemFields.php:53
+msgid "Amount"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:66
+#: includes/Admin/Fields/Quotes/LineItemFields.php:69
+msgid "Description"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:72
+#: includes/Admin/Fields/Quotes/LineItemFields.php:75
+msgid "Taxable"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:74
+#: includes/Admin/Fields/Quotes/LineItemFields.php:77
+msgid "Make this line item taxable."
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/LineItemFields.php:82
+#: includes/Admin/Fields/Quotes/LineItemFields.php:85
+msgid "Predefine Line Items"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/PaymentFields.php:19
+msgid "Select any invoice"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/PaymentFields.php:35
+#: includes/Hooks/ListTable.php:194
+msgid "Payment Date"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/PaymentFields.php:47
+msgid "Payment Method"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/PaymentFields.php:54
+msgid "Transaction ID"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/PaymentFields.php:60
+#: includes/Hooks/ListTable.php:191
+msgid "Payment Status"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/PaymentFields.php:76
+#: includes/Hooks/ListTable.php:193
+msgid "Payment Note"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/TaxFields.php:12
+#: includes/Admin/Fields/Quotes/TaxFields.php:14
+msgid "Prices entered with tax"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/TaxFields.php:14
+#: includes/Admin/Fields/Quotes/TaxFields.php:16
+msgid "No, I will enter prices exclusive of tax (default)"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/TaxFields.php:15
+#: includes/Admin/Fields/Quotes/TaxFields.php:17
+msgid "Yes, I will enter prices inclusive of tax"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/TaxFields.php:21
+#: includes/Admin/Fields/Quotes/TaxFields.php:23
+msgid "Tax Rate(%)"
+msgstr ""
+
+#: includes/Admin/Fields/Invoices/TermsConditionsFields.php:14
+#: includes/Admin/Fields/Quotes/TermsConditionsFields.php:14
+#: includes/Admin/Settings/InvoiceSettings.php:100
+#: includes/Admin/Settings/QuoteSettings.php:100
+#: includes/Admin/Templates/Metabox/Quote/TermsConditions.php:7
+#: includes/Admin/Templates/Metabox/TermsConditions.php:7
+msgid "Terms & Conditions"
+msgstr ""
+
+#: includes/Admin/Fields/Quotes/QuoteFields.php:21
+msgid "Quote Status"
+msgstr ""
+
+#: includes/Admin/Fields/Quotes/QuoteFields.php:27 includes/Helpers/text.php:33
+#: includes/Hooks/ListTable.php:264
+msgid "Quote Number"
+msgstr ""
+
+#: includes/Admin/Fields/Quotes/QuoteFields.php:37 includes/Helpers/text.php:38
+msgid "Valid Until Date"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Easy Invoice"
+msgstr ""
+
+#: includes/Admin/Init.php:70
+msgid "Easy Invoice Dashboard"
+msgstr ""
+
+#: includes/Admin/Init.php:71
+msgid "Dashboard"
+msgstr ""
+
+#: includes/Admin/Init.php:79
+msgid "Easy Invoice Settings"
+msgstr ""
+
+#: includes/Admin/LicenseManager.php:61 includes/Admin/LicenseManager.php:62
+msgid "Licenses"
+msgstr ""
+
+#: includes/Admin/LicenseManager.php:165
+msgid "License updated. Please check license status and notice for more details."
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:21
+msgid "Business"
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:78
+msgid "Business Settings"
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:85
+msgid "Business Logo"
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:91
+msgid "Business Name"
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:92
+msgid "Your business name goes here"
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:98
+msgid "Business Address"
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:100
+msgid "HTML tags supports: a, br, em, strong, hr, p, h1 to h4"
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:126
+msgid "Additional Business Info"
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:128
+msgid ""
+"Extra business info such as Business Number, phone number or email address "
+"and format it anyway you like. You can add your VAT number or ABN here.HTML "
+"tags supports: a, br, em, strong, hr, p, h1 to h4"
+msgstr ""
+
+#: includes/Admin/Settings/BusinessSettings.php:151
+msgid "Your business website URL"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:23
+msgid "Emails"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:36
+#: includes/Admin/Settings/GeneralSettings.php:23
+#: includes/Admin/Settings/PaymentSettings.php:36
+msgid "General"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:37
+msgid "Invoice Available"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:38
+msgid "Quote Available"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:39
+msgid "Payment Received"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:122
+msgid "Invoice available email to client"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:128
+#: includes/Admin/Settings/EmailsSettings.php:179
+#: includes/Admin/Settings/EmailsSettings.php:230
+msgid "Email Subject"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:134
+#: includes/Admin/Settings/EmailsSettings.php:185
+#: includes/Admin/Settings/EmailsSettings.php:236
+msgid "Email Message"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:173
+msgid "Quote available email to client"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:224
+msgid "Email to client when they make payment"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:276
+msgid "Email Options"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:282
+msgid "From Email Address"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:289
+msgid "From Name"
+msgstr ""
+
+#: includes/Admin/Settings/EmailsSettings.php:296
+msgid "Send a copy to admin?"
+msgstr ""
+
+#: includes/Admin/Settings/GeneralSettings.php:78
+msgid "General Settings"
+msgstr ""
+
+#: includes/Admin/Settings/GeneralSettings.php:84
+msgid "Pre-Defined Line Items"
+msgstr ""
+
+#: includes/Admin/Settings/GeneralSettings.php:86
+msgid ""
+"Add 1 line item per line in this format: Qty | Title | Price | Description. "
+"Each field separated with a | symbol.\n"
+"Price should be numbers only, no currency symbol.\n"
+"If you prefer to have an item blank, you still need the | symbol like so: 1 "
+"| Software Development | | Software development cost"
+msgstr ""
+
+#: includes/Admin/Settings/InvoiceSettings.php:23 includes/Helpers/text.php:7
+#: includes/Hooks/ListTable.php:192 includes/PostTypes/Invoices.php:20
+msgid "Invoice"
+msgstr ""
+
+#: includes/Admin/Settings/InvoiceSettings.php:79
+msgid "Invoice Settings"
+msgstr ""
+
+#: includes/Admin/Settings/InvoiceSettings.php:85
+msgid "Invoice Prefix"
+msgstr ""
+
+#: includes/Admin/Settings/InvoiceSettings.php:93
+#: includes/Admin/Settings/QuoteSettings.php:93
+msgid "Show/Hide Adjust Field"
+msgstr ""
+
+#: includes/Admin/Settings/InvoiceSettings.php:94
+#: includes/Admin/Settings/QuoteSettings.php:94
+msgid "Enable/Disable Adjust field. Tick this to show adjust field"
+msgstr ""
+
+#: includes/Admin/Settings/InvoiceSettings.php:102
+msgid "Terms and conditions that will be displayed on your invoice"
+msgstr ""
+
+#: includes/Admin/Settings/InvoiceSettings.php:107
+#: includes/Admin/Settings/QuoteSettings.php:107
+msgid "Footer Text"
+msgstr ""
+
+#: includes/Admin/Settings/InvoiceSettings.php:109
+msgid ""
+"You can modify your invoice footer text from here.HTML tags supports: a, "
+"br, em, strong, hr, p, h1 to h4"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:23
+#: includes/PostTypes/Payments.php:83
+msgid "Payment"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:80
+msgid "Currency Settings"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:93
+#: includes/Admin/Settings/PaymentSettings.php:94
+msgid "Currency Symbol Type"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:98
+msgid "Currency Code"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:104
+msgid "Currency symbol/code position"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:111
+msgid "Thousand Separator"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:112
+msgid "Thousand separator for price."
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:118
+msgid "Number of Decimals"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:119
+msgid "Number of decimals shown in price."
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:125
+msgid "Decimal Separator"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:126
+msgid "Decimal separator for price."
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:136
+#: includes/Admin/Settings/PaymentSettings.php:168
+msgid "Payment Gateways"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:143
+msgid "Test Mode"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:144
+msgid ""
+"While test mode is enabled, no live transactions are processed.<br>Use test "
+"mode in conjunction with the sandbox/test account for the payment gateways "
+"to test."
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:148
+msgid "Enable proceed to payment button"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:155
+msgid "Proceed to payment button link"
+msgstr ""
+
+#: includes/Admin/Settings/PaymentSettings.php:162
+msgid "Thank you page"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:23 includes/Helpers/text.php:31
+#: includes/PostTypes/Quotes.php:20
+msgid "Quote"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:79
+msgid "Quote Settings"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:85
+msgid "Quote Prefix"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:102
+msgid "Terms and conditions that will be displayed on your quote!"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:104
+msgid ""
+"This quote has a fixed price. Upon acceptance, we kindly ask for a 25% "
+"deposit prior to initiating the work."
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:109
+msgid ""
+"You can modify your quote footer text from here.HTML tags supports: a, br, "
+"em, strong, hr, p, h1 to h4"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:135
+msgid "Quote Acceptance"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:141
+msgid "Accept quote button"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:142
+msgid "Show/hide accept quote button on quotes."
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:148
+msgid "Accept quote button action"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:149
+msgid ""
+"Upon the client clicking the \"accept quote\" button, the subsequent action "
+"will be activated."
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:155
+#. translators: %1s is a placeholder for the word "Quote" (singular); %2s is a
+#. placeholder for "Invoice" (singular)
+msgid "Convert %1s to %2s"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:161
+#. translators: %1s is a placeholder for the word "Quote" (singular); %2s is a
+#. placeholder for "Invoice" (singular)
+msgid "Convert %1s to %2s and send to client"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:167
+#. translators: %1s is a placeholder for the word "Invoice" (singular); %2s is
+#. a placeholder for "Quote" (singular)
+msgid "Create new %1s, keep %2s as-is"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:173
+#. translators: %1s is a placeholder for the word "Invoice" (singular); %2s is
+#. a placeholder for "Quote" (singular)
+msgid "Create new %1s and send to client, keep %2s as-is"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:177
+msgid "Do nothing"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:182
+msgid "Accept Quote Text"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:184
+msgid "This information tells your client what happens once they accept the Quote"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:186
+msgid ""
+"Important: When you accept this Quote, an Invoice will be created "
+"automatically. This will form a legally binding contract."
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:189
+msgid "Accepted Quote Message"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:191
+msgid "If the client accepts the Quote, display this message."
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:193
+msgid "You've confirmed the Quote.<br>We'll get in touch with you shortly."
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:197
+msgid "Decline Reason Required"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:198
+msgid "Make the 'Reason for declining' field mandatory when rejecting."
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:205
+msgid "Declined Quote Message"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:207
+msgid "Message to display if client declines the Quote"
+msgstr ""
+
+#: includes/Admin/Settings/QuoteSettings.php:209
+msgid "You've declined the Quote.<br>We'll get in touch with you shortly"
+msgstr ""
+
+#: includes/Admin/Settings/TaxSettings.php:21
+#: includes/Admin/Templates/Metabox/LineItems.php:30
+#: includes/Admin/Templates/Metabox/Quote/LineItems.php:30
+#: includes/Helpers/text.php:22 includes/Meta/Invoice.php:44
+#: includes/Meta/Quote.php:46
+msgid "Tax"
+msgstr ""
+
+#: includes/Admin/Settings/TaxSettings.php:76
+msgid "Tax Settings"
+msgstr ""
+
+#: includes/Admin/Settings/TaxSettings.php:82
+msgid "How do you enter tax?"
+msgstr ""
+
+#: includes/Admin/Settings/TaxSettings.php:86
+msgid "I will enter price inclusive of tax"
+msgstr ""
+
+#: includes/Admin/Settings/TaxSettings.php:87
+msgid "I will enter price exclusive of tax"
+msgstr ""
+
+#: includes/Admin/Settings/TaxSettings.php:93
+msgid "Tax Percentage"
+msgstr ""
+
+#: includes/Admin/Settings/TextsSettings.php:21
+msgid "Texts"
+msgstr ""
+
+#: includes/Admin/Settings/TextsSettings.php:78
+msgid "Text Settings"
+msgstr ""
+
+#: includes/Admin/Settings.php:73
+msgid "Your settings have been saved."
+msgstr ""
+
+#: includes/Admin/Settings.php:684
+msgid "Select a page&hellip;"
+msgstr ""
+
+#: includes/Admin/Settings.php:750
+msgid "Add New"
+msgstr ""
+
+#: includes/Admin/Templates/Addon/List.php:58
+msgid "Status:"
+msgstr ""
+
+#: includes/Admin/Templates/Addon/List.php:60
+msgid "Activated"
+msgstr ""
+
+#: includes/Admin/Templates/Addon/List.php:62
+msgid "Inactive"
+msgstr ""
+
+#: includes/Admin/Templates/Addon/List.php:64
+msgid "Not Installed"
+msgstr ""
+
+#: includes/Admin/Templates/Addon/List.php:71
+#. translators: %s: Add-on title
+msgid "Deactivate %s now"
+msgstr ""
+
+#: includes/Admin/Templates/Addon/List.php:87
+#: includes/Admin/Templates/License/License.php:40
+msgid "Deactivate"
+msgstr ""
+
+#: includes/Admin/Templates/Addon/List.php:91
+#. translators: %s: Add-on title
+msgid "Activate %s now"
+msgstr ""
+
+#: includes/Admin/Templates/Addon/List.php:107
+msgid "Activate"
+msgstr ""
+
+#: includes/Admin/Templates/Addon/List.php:111
+#. translators: %s: Add-on title
+msgid "Install %s now"
+msgstr ""
+
+#: includes/Admin/Templates/Dashboard.php:7
+msgid "Total Invoices"
+msgstr ""
+
+#: includes/Admin/Templates/Dashboard.php:12
+msgid "Total Quotes"
+msgstr ""
+
+#: includes/Admin/Templates/Dashboard.php:17
+msgid "Paid Invoices"
+msgstr ""
+
+#: includes/Admin/Templates/Dashboard.php:22 includes/Hooks/ListTable.php:190
+msgid "Paid Amount"
+msgstr ""
+
+#: includes/Admin/Templates/Dashboard.php:27
+msgid "Accepted Quotes"
+msgstr ""
+
+#: includes/Admin/Templates/License/License.php:2
+msgid "License Manager"
+msgstr ""
+
+#: includes/Admin/Templates/License/License.php:13
+msgid "Addon Name"
+msgstr ""
+
+#: includes/Admin/Templates/License/License.php:14
+msgid "License"
+msgstr ""
+
+#: includes/Admin/Templates/License/License.php:15
+msgid "Expire Date"
+msgstr ""
+
+#: includes/Admin/Templates/License/License.php:16
+#: includes/Hooks/ListTable.php:131 includes/Hooks/ListTable.php:266
+msgid "Status"
+msgstr ""
+
+#: includes/Admin/Templates/License/License.php:17
+msgid "Message"
+msgstr ""
+
+#: includes/Admin/Templates/License/License.php:56
+msgid "Please enter your license key here"
+msgstr ""
+
+#: includes/Admin/Templates/License/License.php:62
+msgid "Modify License"
+msgstr ""
+
+#: includes/Admin/Templates/License/License.php:93
+msgid "Update"
+msgstr ""
+
+#: includes/Admin/Templates/Metabox/InvoiceDescriptions.php:5
+#: includes/Admin/Templates/Metabox/Quote/Descriptions.php:5
+msgid "Invoice Description"
+msgstr ""
+
+#: includes/Admin/Templates/Metabox/LineItems.php:6
+#: includes/Admin/Templates/Metabox/Quote/LineItems.php:6
+msgid "Line Items"
+msgstr ""
+
+#: includes/Admin/Templates/Metabox/LineItems.php:23
+#: includes/Admin/Templates/Metabox/Quote/LineItems.php:23
+msgid "Invoice Totals"
+msgstr ""
+
+#: includes/Admin/Templates/Metabox/LineItems.php:25
+#: includes/Admin/Templates/Metabox/Quote/LineItems.php:25
+#: includes/Helpers/text.php:20
+msgid "Sub Total"
+msgstr ""
+
+#: includes/Admin/Templates/Metabox/LineItems.php:50
+#: includes/Admin/Templates/Metabox/Quote/LineItems.php:50
+#: includes/Helpers/invoice.php:135
+msgid "Paid"
+msgstr ""
+
+#: includes/Admin/Templates/Metabox/LineItems.php:56
+#: includes/Admin/Templates/Metabox/Quote/LineItems.php:56
+#: includes/Helpers/text.php:15
+msgid "Total Due"
+msgstr ""
+
+#: includes/Admin/Templates/Metabox/Payments.php:7
+#: includes/PostTypes/Payments.php:82
+msgid "Payments"
+msgstr ""
+
+#: includes/Admin/Views/html-admin-settings.php:48
+msgid "Save changes"
+msgstr ""
+
+#: includes/Ajax.php:168
+msgid "Success"
+msgstr ""
+
+#: includes/Ajax.php:217 includes/Helpers/quote.php:93
+msgid "Declined"
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalPaymentGateway.php:18
+#: includes/Gateways/PayPal/PayPalPaymentGateway.php:21
+msgid "PayPal Standard"
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalPaymentGateway.php:36
+msgid "PayPal Settings"
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalPaymentGateway.php:42
+msgid "PayPal Email Address"
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalPaymentGateway.php:43
+msgid " Enter your PayPal account's email"
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalPaymentGateway.php:48
+msgid "Gateway Label"
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalPaymentGateway.php:49
+msgid "Gateway label"
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalPaymentGateway.php:52
+msgid "Paypal Standard"
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalRequest.php:133
+msgid "Total Price"
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalWebHooks.php:29
+msgid "invalid request. Invoice ID missing."
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalWebHooks.php:39
+msgid "invalid request. Invoice ID missed matched."
+msgstr ""
+
+#: includes/Gateways/PayPal/PayPalWebHooks.php:48
+msgid "invalid request."
+msgstr ""
+
+#: includes/Helpers/currency.php:193
+msgid "United Arab Emirates dirham"
+msgstr ""
+
+#: includes/Helpers/currency.php:194
+msgid "Afghan afghani"
+msgstr ""
+
+#: includes/Helpers/currency.php:195
+msgid "Albanian lek"
+msgstr ""
+
+#: includes/Helpers/currency.php:196
+msgid "Armenian dram"
+msgstr ""
+
+#: includes/Helpers/currency.php:197
+msgid "Netherlands Antillean guilder"
+msgstr ""
+
+#: includes/Helpers/currency.php:198
+msgid "Angolan kwanza"
+msgstr ""
+
+#: includes/Helpers/currency.php:199
+msgid "Argentine peso"
+msgstr ""
+
+#: includes/Helpers/currency.php:200
+msgid "Australian dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:201
+msgid "Aruban florin"
+msgstr ""
+
+#: includes/Helpers/currency.php:202
+msgid "Azerbaijani manat"
+msgstr ""
+
+#: includes/Helpers/currency.php:203
+msgid "Bosnia and Herzegovina convertible mark"
+msgstr ""
+
+#: includes/Helpers/currency.php:204
+msgid "Barbadian dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:205
+msgid "Bangladeshi taka"
+msgstr ""
+
+#: includes/Helpers/currency.php:206
+msgid "Bulgarian lev"
+msgstr ""
+
+#: includes/Helpers/currency.php:207
+msgid "Bahraini dinar"
+msgstr ""
+
+#: includes/Helpers/currency.php:208
+msgid "Burundian franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:209
+msgid "Bermudian dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:210
+msgid "Brunei dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:211
+msgid "Bolivian boliviano"
+msgstr ""
+
+#: includes/Helpers/currency.php:212
+msgid "Brazilian real"
+msgstr ""
+
+#: includes/Helpers/currency.php:213
+msgid "Bahamian dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:214
+msgid "Bitcoin"
+msgstr ""
+
+#: includes/Helpers/currency.php:215
+msgid "Bhutanese ngultrum"
+msgstr ""
+
+#: includes/Helpers/currency.php:216
+msgid "Botswana pula"
+msgstr ""
+
+#: includes/Helpers/currency.php:217
+msgid "Belarusian ruble (old)"
+msgstr ""
+
+#: includes/Helpers/currency.php:218
+msgid "Belarusian ruble"
+msgstr ""
+
+#: includes/Helpers/currency.php:219
+msgid "Belize dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:220
+msgid "Canadian dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:221
+msgid "Congolese franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:222
+msgid "Swiss franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:223
+msgid "Chilean peso"
+msgstr ""
+
+#: includes/Helpers/currency.php:224
+msgid "Chinese yuan"
+msgstr ""
+
+#: includes/Helpers/currency.php:225
+msgid "Colombian peso"
+msgstr ""
+
+#: includes/Helpers/currency.php:226
+msgid "Costa Rican col&oacute;n"
+msgstr ""
+
+#: includes/Helpers/currency.php:227
+msgid "Cuban convertible peso"
+msgstr ""
+
+#: includes/Helpers/currency.php:228
+msgid "Cuban peso"
+msgstr ""
+
+#: includes/Helpers/currency.php:229
+msgid "Cape Verdean escudo"
+msgstr ""
+
+#: includes/Helpers/currency.php:230
+msgid "Czech koruna"
+msgstr ""
+
+#: includes/Helpers/currency.php:231
+msgid "Djiboutian franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:232
+msgid "Danish krone"
+msgstr ""
+
+#: includes/Helpers/currency.php:233
+msgid "Dominican peso"
+msgstr ""
+
+#: includes/Helpers/currency.php:234
+msgid "Algerian dinar"
+msgstr ""
+
+#: includes/Helpers/currency.php:235
+msgid "Egyptian pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:236
+msgid "Eritrean nakfa"
+msgstr ""
+
+#: includes/Helpers/currency.php:237
+msgid "Ethiopian birr"
+msgstr ""
+
+#: includes/Helpers/currency.php:238
+msgid "Euro"
+msgstr ""
+
+#: includes/Helpers/currency.php:239
+msgid "Fijian dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:240
+msgid "Falkland Islands pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:241
+msgid "Pound sterling"
+msgstr ""
+
+#: includes/Helpers/currency.php:242
+msgid "Georgian lari"
+msgstr ""
+
+#: includes/Helpers/currency.php:243
+msgid "Guernsey pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:244
+msgid "Ghana cedi"
+msgstr ""
+
+#: includes/Helpers/currency.php:245
+msgid "Gibraltar pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:246
+msgid "Gambian dalasi"
+msgstr ""
+
+#: includes/Helpers/currency.php:247
+msgid "Guinean franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:248
+msgid "Guatemalan quetzal"
+msgstr ""
+
+#: includes/Helpers/currency.php:249
+msgid "Guyanese dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:250
+msgid "Hong Kong dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:251
+msgid "Honduran lempira"
+msgstr ""
+
+#: includes/Helpers/currency.php:252
+msgid "Croatian kuna"
+msgstr ""
+
+#: includes/Helpers/currency.php:253
+msgid "Haitian gourde"
+msgstr ""
+
+#: includes/Helpers/currency.php:254
+msgid "Hungarian forint"
+msgstr ""
+
+#: includes/Helpers/currency.php:255
+msgid "Indonesian rupiah"
+msgstr ""
+
+#: includes/Helpers/currency.php:256
+msgid "Israeli new shekel"
+msgstr ""
+
+#: includes/Helpers/currency.php:257
+msgid "Manx pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:258
+msgid "Indian rupee"
+msgstr ""
+
+#: includes/Helpers/currency.php:259
+msgid "Iraqi dinar"
+msgstr ""
+
+#: includes/Helpers/currency.php:260
+msgid "Iranian rial"
+msgstr ""
+
+#: includes/Helpers/currency.php:261
+msgid "Iranian toman"
+msgstr ""
+
+#: includes/Helpers/currency.php:262
+msgid "Icelandic kr&oacute;na"
+msgstr ""
+
+#: includes/Helpers/currency.php:263
+msgid "Jersey pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:264
+msgid "Jamaican dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:265
+msgid "Jordanian dinar"
+msgstr ""
+
+#: includes/Helpers/currency.php:266
+msgid "Japanese yen"
+msgstr ""
+
+#: includes/Helpers/currency.php:267
+msgid "Kenyan shilling"
+msgstr ""
+
+#: includes/Helpers/currency.php:268
+msgid "Kyrgyzstani som"
+msgstr ""
+
+#: includes/Helpers/currency.php:269
+msgid "Cambodian riel"
+msgstr ""
+
+#: includes/Helpers/currency.php:270
+msgid "Comorian franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:271
+msgid "North Korean won"
+msgstr ""
+
+#: includes/Helpers/currency.php:272
+msgid "South Korean won"
+msgstr ""
+
+#: includes/Helpers/currency.php:273
+msgid "Kuwaiti dinar"
+msgstr ""
+
+#: includes/Helpers/currency.php:274
+msgid "Cayman Islands dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:275
+msgid "Kazakhstani tenge"
+msgstr ""
+
+#: includes/Helpers/currency.php:276
+msgid "Lao kip"
+msgstr ""
+
+#: includes/Helpers/currency.php:277
+msgid "Lebanese pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:278
+msgid "Sri Lankan rupee"
+msgstr ""
+
+#: includes/Helpers/currency.php:279
+msgid "Liberian dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:280
+msgid "Lesotho loti"
+msgstr ""
+
+#: includes/Helpers/currency.php:281
+msgid "Libyan dinar"
+msgstr ""
+
+#: includes/Helpers/currency.php:282
+msgid "Moroccan dirham"
+msgstr ""
+
+#: includes/Helpers/currency.php:283
+msgid "Moldovan leu"
+msgstr ""
+
+#: includes/Helpers/currency.php:284
+msgid "Malagasy ariary"
+msgstr ""
+
+#: includes/Helpers/currency.php:285
+msgid "Macedonian denar"
+msgstr ""
+
+#: includes/Helpers/currency.php:286
+msgid "Burmese kyat"
+msgstr ""
+
+#: includes/Helpers/currency.php:287
+msgid "Mongolian t&ouml;gr&ouml;g"
+msgstr ""
+
+#: includes/Helpers/currency.php:288
+msgid "Macanese pataca"
+msgstr ""
+
+#: includes/Helpers/currency.php:289
+msgid "Mauritanian ouguiya"
+msgstr ""
+
+#: includes/Helpers/currency.php:290
+msgid "Mauritian rupee"
+msgstr ""
+
+#: includes/Helpers/currency.php:291
+msgid "Maldivian rufiyaa"
+msgstr ""
+
+#: includes/Helpers/currency.php:292
+msgid "Malawian kwacha"
+msgstr ""
+
+#: includes/Helpers/currency.php:293
+msgid "Mexican peso"
+msgstr ""
+
+#: includes/Helpers/currency.php:294
+msgid "Malaysian ringgit"
+msgstr ""
+
+#: includes/Helpers/currency.php:295
+msgid "Mozambican metical"
+msgstr ""
+
+#: includes/Helpers/currency.php:296
+msgid "Namibian dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:297
+msgid "Nigerian naira"
+msgstr ""
+
+#: includes/Helpers/currency.php:298
+msgid "Nicaraguan c&oacute;rdoba"
+msgstr ""
+
+#: includes/Helpers/currency.php:299
+msgid "Norwegian krone"
+msgstr ""
+
+#: includes/Helpers/currency.php:300
+msgid "Nepalese rupee"
+msgstr ""
+
+#: includes/Helpers/currency.php:301
+msgid "New Zealand dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:302
+msgid "Omani rial"
+msgstr ""
+
+#: includes/Helpers/currency.php:303
+msgid "Panamanian balboa"
+msgstr ""
+
+#: includes/Helpers/currency.php:304
+msgid "Peruvian nuevo sol"
+msgstr ""
+
+#: includes/Helpers/currency.php:305
+msgid "Papua New Guinean kina"
+msgstr ""
+
+#: includes/Helpers/currency.php:306
+msgid "Philippine peso"
+msgstr ""
+
+#: includes/Helpers/currency.php:307
+msgid "Pakistani rupee"
+msgstr ""
+
+#: includes/Helpers/currency.php:308
+msgid "Polish z&#x142;oty"
+msgstr ""
+
+#: includes/Helpers/currency.php:309
+msgid "Transnistrian ruble"
+msgstr ""
+
+#: includes/Helpers/currency.php:310
+msgid "Paraguayan guaran&iacute;"
+msgstr ""
+
+#: includes/Helpers/currency.php:311
+msgid "Qatari riyal"
+msgstr ""
+
+#: includes/Helpers/currency.php:312
+msgid "Romanian leu"
+msgstr ""
+
+#: includes/Helpers/currency.php:313
+msgid "Serbian dinar"
+msgstr ""
+
+#: includes/Helpers/currency.php:314
+msgid "Russian ruble"
+msgstr ""
+
+#: includes/Helpers/currency.php:315
+msgid "Rwandan franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:316
+msgid "Saudi riyal"
+msgstr ""
+
+#: includes/Helpers/currency.php:317
+msgid "Solomon Islands dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:318
+msgid "Seychellois rupee"
+msgstr ""
+
+#: includes/Helpers/currency.php:319
+msgid "Sudanese pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:320
+msgid "Swedish krona"
+msgstr ""
+
+#: includes/Helpers/currency.php:321
+msgid "Singapore dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:322
+msgid "Saint Helena pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:323
+msgid "Sierra Leonean leone"
+msgstr ""
+
+#: includes/Helpers/currency.php:324
+msgid "Somali shilling"
+msgstr ""
+
+#: includes/Helpers/currency.php:325
+msgid "Surinamese dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:326
+msgid "South Sudanese pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:327
+msgid "S&atilde;o Tom&eacute; and Pr&iacute;ncipe dobra"
+msgstr ""
+
+#: includes/Helpers/currency.php:328
+msgid "Syrian pound"
+msgstr ""
+
+#: includes/Helpers/currency.php:329
+msgid "Swazi lilangeni"
+msgstr ""
+
+#: includes/Helpers/currency.php:330
+msgid "Thai baht"
+msgstr ""
+
+#: includes/Helpers/currency.php:331
+msgid "Tajikistani somoni"
+msgstr ""
+
+#: includes/Helpers/currency.php:332
+msgid "Turkmenistan manat"
+msgstr ""
+
+#: includes/Helpers/currency.php:333
+msgid "Tunisian dinar"
+msgstr ""
+
+#: includes/Helpers/currency.php:334
+msgid "Tongan pa&#x2bb;anga"
+msgstr ""
+
+#: includes/Helpers/currency.php:335
+msgid "Turkish lira"
+msgstr ""
+
+#: includes/Helpers/currency.php:336
+msgid "Trinidad and Tobago dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:337
+msgid "New Taiwan dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:338
+msgid "Tanzanian shilling"
+msgstr ""
+
+#: includes/Helpers/currency.php:339
+msgid "Ukrainian hryvnia"
+msgstr ""
+
+#: includes/Helpers/currency.php:340
+msgid "Ugandan shilling"
+msgstr ""
+
+#: includes/Helpers/currency.php:341
+msgid "United States (US) dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:342
+msgid "Uruguayan peso"
+msgstr ""
+
+#: includes/Helpers/currency.php:343
+msgid "Uzbekistani som"
+msgstr ""
+
+#: includes/Helpers/currency.php:344
+msgid "Venezuelan bol&iacute;var"
+msgstr ""
+
+#: includes/Helpers/currency.php:345
+msgid "Vietnamese &#x111;&#x1ed3;ng"
+msgstr ""
+
+#: includes/Helpers/currency.php:346
+msgid "Vanuatu vatu"
+msgstr ""
+
+#: includes/Helpers/currency.php:347
+msgid "Samoan t&#x101;l&#x101;"
+msgstr ""
+
+#: includes/Helpers/currency.php:348
+msgid "Central African CFA franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:349
+msgid "East Caribbean dollar"
+msgstr ""
+
+#: includes/Helpers/currency.php:350
+msgid "West African CFA franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:351
+msgid "CFP franc"
+msgstr ""
+
+#: includes/Helpers/currency.php:352
+msgid "Yemeni rial"
+msgstr ""
+
+#: includes/Helpers/currency.php:353
+msgid "South African rand"
+msgstr ""
+
+#: includes/Helpers/currency.php:354
+msgid "Zambian kwacha"
+msgstr ""
+
+#: includes/Helpers/currency.php:416
+msgid "Left"
+msgstr ""
+
+#: includes/Helpers/currency.php:417
+msgid "Right"
+msgstr ""
+
+#: includes/Helpers/currency.php:418
+msgid "Left with space"
+msgstr ""
+
+#: includes/Helpers/currency.php:419
+msgid "Right with space"
+msgstr ""
+
+#: includes/Helpers/invoice-options.php:73
+msgid "Add a pre-defined line item"
+msgstr ""
+
+#: includes/Helpers/invoice.php:132 includes/Helpers/quote.php:90
+msgid "Available"
+msgstr ""
+
+#: includes/Helpers/invoice.php:133 includes/Helpers/quote.php:91
+msgid "Draft"
+msgstr ""
+
+#: includes/Helpers/invoice.php:134
+msgid "Overdue"
+msgstr ""
+
+#: includes/Helpers/invoice.php:136
+msgid "Unpaid"
+msgstr ""
+
+#: includes/Helpers/invoice.php:137 includes/Helpers/quote.php:94
+msgid "Cancelled"
+msgstr ""
+
+#: includes/Helpers/quote.php:92
+msgid "Accepted"
+msgstr ""
+
+#: includes/Helpers/quote.php:95
+msgid "Expired"
+msgstr ""
+
+#: includes/Helpers/quote.php:96
+msgid "Sent"
+msgstr ""
+
+#: includes/Helpers/template.php:127
+msgid "was"
+msgstr ""
+
+#: includes/Helpers/template.php:127
+msgid "is"
+msgstr ""
+
+#: includes/Helpers/template.php:153
+msgid "Invoice number"
+msgstr ""
+
+#: includes/Helpers/template.php:154
+msgid "Quote number"
+msgstr ""
+
+#: includes/Helpers/template.php:155
+msgid "Name of the client on invoice"
+msgstr ""
+
+#: includes/Helpers/template.php:156
+msgid "Permalink of the invoice"
+msgstr ""
+
+#: includes/Helpers/template.php:157
+msgid "Permalink of the quote"
+msgstr ""
+
+#: includes/Helpers/template.php:158
+msgid "Due date of the invoice"
+msgstr ""
+
+#: includes/Helpers/template.php:159
+msgid "Total due amount of the invoice with currency code"
+msgstr ""
+
+#: includes/Helpers/template.php:160
+msgid "Current date"
+msgstr ""
+
+#: includes/Helpers/template.php:161
+msgid "If due date of the invoice is past"
+msgstr ""
+
+#: includes/Helpers/template.php:282
+msgid "Smart Tags for Emails"
+msgstr ""
+
+#: includes/Helpers/text.php:8 includes/PostTypes/Invoices.php:19
+msgid "Invoices"
+msgstr ""
+
+#: includes/Helpers/text.php:9
+msgid "From"
+msgstr ""
+
+#: includes/Helpers/text.php:10
+msgid "To"
+msgstr ""
+
+#: includes/Helpers/text.php:13
+msgid "Invoice Date"
+msgstr ""
+
+#: includes/Helpers/text.php:16
+msgid "Qty"
+msgstr ""
+
+#: includes/Helpers/text.php:17
+msgid "Service"
+msgstr ""
+
+#: includes/Helpers/text.php:18
+msgid "Rate/Price"
+msgstr ""
+
+#: includes/Helpers/text.php:19
+msgid "Adjust"
+msgstr ""
+
+#: includes/Helpers/text.php:21
+msgid "Total"
+msgstr ""
+
+#: includes/Helpers/text.php:24
+msgid "Page"
+msgstr ""
+
+#: includes/Helpers/text.php:25
+msgid "Print"
+msgstr ""
+
+#: includes/Helpers/text.php:26 includes/Meta/Invoice.php:237
+#: includes/Meta/Quote.php:263
+msgid "Download as PDF"
+msgstr ""
+
+#: includes/Helpers/text.php:27
+msgid "Send Email"
+msgstr ""
+
+#: includes/Helpers/text.php:28
+msgid "Pay Now"
+msgstr ""
+
+#: includes/Helpers/text.php:29
+msgid "Proceed to payment"
+msgstr ""
+
+#: includes/Helpers/text.php:30
+msgid "Invoice Payment Gateway"
+msgstr ""
+
+#: includes/Helpers/text.php:32 includes/PostTypes/Quotes.php:19
+msgid "Quotes"
+msgstr ""
+
+#: includes/Helpers/text.php:34
+msgid "Accept Quote"
+msgstr ""
+
+#: includes/Helpers/text.php:35
+msgid "Decline Quote"
+msgstr ""
+
+#: includes/Helpers/text.php:36
+msgid "Reason for declining"
+msgstr ""
+
+#: includes/Helpers/text.php:37
+msgid "Quote Amount"
+msgstr ""
+
+#: includes/Helpers/text.php:39
+msgid "Quote Date"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:40
+msgid "Clone this item"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:40
+msgid "Clone"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:57
+msgid "No quote or invoice to duplicate!"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:61
+msgid "The link you followed has expired."
+msgstr ""
+
+#: includes/Hooks/ListTable.php:66
+msgid "Creation failed, could not find original invoice or quote: "
+msgstr ""
+
+#: includes/Hooks/ListTable.php:130 includes/Hooks/ListTable.php:265
+msgid "Client"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:133
+msgid "Due Amount"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:135 includes/Hooks/ListTable.php:269
+msgid "Date"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:136 includes/Hooks/ListTable.php:270
+msgid "Action"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:189
+msgid "Payment Gateway"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:267
+msgid "Valid Date"
+msgstr ""
+
+#: includes/Hooks/ListTable.php:268
+msgid "Total Amount"
+msgstr ""
+
+#: includes/Hooks/QuoteTemplate.php:58
+msgid "You can't accept this quote. Please contact site administrator"
+msgstr ""
+
+#: includes/Hooks/QuoteTemplate.php:59
+msgid "You can't decline this quote. Please contact site administrator"
+msgstr ""
+
+#: includes/Meta/Invoice.php:35 includes/Meta/Quote.php:37
+msgid "Client Detail"
+msgstr ""
+
+#: includes/Meta/Invoice.php:38
+msgid "Invoice Details"
+msgstr ""
+
+#: includes/Meta/Invoice.php:236 includes/Meta/Quote.php:262
+msgid "View"
+msgstr ""
+
+#: includes/Meta/Quote.php:40
+msgid "Quote Details"
+msgstr ""
+
+#: includes/Meta/Quote.php:49
+msgid "Quote Log"
+msgstr ""
+
+#: includes/PostTypes/Invoices.php:21 includes/PostTypes/Invoices.php:22
+msgid "Add New invoice"
+msgstr ""
+
+#: includes/PostTypes/Invoices.php:23
+msgid "Edit invoice"
+msgstr ""
+
+#: includes/PostTypes/Invoices.php:24
+msgid "New invoice"
+msgstr ""
+
+#: includes/PostTypes/Invoices.php:25
+msgid "All Invoices"
+msgstr ""
+
+#: includes/PostTypes/Invoices.php:26 includes/PostTypes/Payments.php:89
+msgid "View invoice"
+msgstr ""
+
+#: includes/PostTypes/Invoices.php:27 includes/PostTypes/Payments.php:90
+msgid "Search invoice"
+msgstr ""
+
+#: includes/PostTypes/Invoices.php:28
+msgid "No Invoices found"
+msgstr ""
+
+#: includes/PostTypes/Invoices.php:29
+msgid "No Invoices found in the Trash"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:23
+#. translators: %s: number of orders
+msgid "Pending payment <span class=\"count\">(%s)</span>"
+msgid_plural "Pending payments <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/PostTypes/Payments.php:32
+#. translators: %s: number of orders
+msgid "Complete <span class=\"count\">(%s)</span>"
+msgid_plural "Completed <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/PostTypes/Payments.php:41
+#. translators: %s: number of orders
+msgid "On hold <span class=\"count\">(%s)</span>"
+msgid_plural "On hold <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/PostTypes/Payments.php:50
+#. translators: %s: number of orders
+msgid "Refunded <span class=\"count\">(%s)</span>"
+msgid_plural "Refunded <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/PostTypes/Payments.php:59
+#. translators: %s: number of orders
+msgid "Failed <span class=\"count\">(%s)</span>"
+msgid_plural "Failed <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/PostTypes/Payments.php:84 includes/PostTypes/Payments.php:85
+msgid "Add New payment"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:86
+msgid "Edit payment"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:87
+msgid "New payment"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:88
+msgid "All Payments"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:91
+msgid "No Payments found"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:92
+msgid "No Payments found in the Trash"
+msgstr ""
+
+#: includes/PostTypes/Quotes.php:21 includes/PostTypes/Quotes.php:22
+msgid "Add New quote"
+msgstr ""
+
+#: includes/PostTypes/Quotes.php:23
+msgid "Edit quote"
+msgstr ""
+
+#: includes/PostTypes/Quotes.php:24
+msgid "New quote"
+msgstr ""
+
+#: includes/PostTypes/Quotes.php:25
+msgid "All Quotes"
+msgstr ""
+
+#: includes/PostTypes/Quotes.php:26
+msgid "View quote"
+msgstr ""
+
+#: includes/PostTypes/Quotes.php:27
+msgid "Search quote"
+msgstr ""
+
+#: includes/PostTypes/Quotes.php:28
+msgid "No Quotes found"
+msgstr ""
+
+#: includes/PostTypes/Quotes.php:29
+msgid "No Quotes found in the Trash"
+msgstr ""
+
+#: includes/Repositories/PaymentRepository.php:19
+msgid "Pending"
+msgstr ""
+
+#: includes/Repositories/PaymentRepository.php:20
+msgid "Completed"
+msgstr ""
+
+#: includes/Repositories/PaymentRepository.php:21
+msgid "On Hold"
+msgstr ""
+
+#: includes/Repositories/PaymentRepository.php:22
+msgid "Refunded"
+msgstr ""
+
+#: includes/Repositories/PaymentRepository.php:23
+msgid "Failed"
+msgstr ""
+
+#: includes/Updater/AddonUpdateHandler.php:224
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+
+#: includes/Updater/AddonUpdateHandler.php:232
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+
+#: includes/Updater/AddonUpdateHandler.php:432
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: includes/Updater/AddonUpdateHandler.php:432
+msgid "Error"
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:147
+msgid "License inactive"
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:213
+msgid ""
+"The provided license key expired on %1$s. Please <a href=\"%2$s\" "
+"target=\"_blank\">renew your license key</a>."
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:217
+msgid ""
+"The provided license key has been disabled. Please <a href=\"%s\" "
+"target=\"_blank\">contact support</a> for more information."
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:221
+msgid ""
+"The provided license is invalid. Please <a href=\"%s\" "
+"target=\"_blank\">visit your account page</a> and verify it."
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:226
+msgid ""
+"The provided license is not active for this URL. Please <a href=\"%s\" "
+"target=\"_blank\">visit your account page</a> to manage your license key "
+"URLs."
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:231
+msgid "This appears to be an invalid license key for <strong>%1$s</strong>."
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:235
+msgid ""
+"The provided license key has reached its activation limit. Please <a "
+"href=\"%1$s\" target=\"_blank\">View possible upgrades</a> now."
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:239
+msgid ""
+"The key you entered belongs to a bundle, please use the product specific "
+"license key."
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:243
+msgid ""
+"The provided license key could not be found. Please <a href=\"%s\" "
+"target=\"_blank\">contact support</a> for more information."
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:249
+msgid "<strong>Activation error:</strong> %1$s"
+msgstr ""
+
+#: includes/Updater/AddonUpdater.php:257
+msgid "License successfully activated"
+msgstr ""
+
+#: templates/parts/error-page.php:3
+msgid "Something went wrong"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://matrixaddons.com/wordpress-invoice-plugin"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Invoicing plugin for WordPress that supports invoice Payment"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "MatrixAddons"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://profiles.wordpress.org/matrixaddons"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:17
+msgctxt "payment status"
+msgid "Pending"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:26
+msgctxt "Payment status"
+msgid "Complete"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:35
+msgctxt "Payment status"
+msgid "On hold"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:44
+msgctxt "Payment status"
+msgid "Refunded"
+msgstr ""
+
+#: includes/PostTypes/Payments.php:53
+msgctxt "Payment status"
+msgid "Failed"
+msgstr ""

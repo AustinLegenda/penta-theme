@@ -1,0 +1,27 @@
+@import "scss/reset";
+@import "scss/common";
+@import "scss/header";
+@import "scss/layout";
+@import "scss/table";
+@import "scss/buttons";
+@import "scss/top-bar";
+@import "scss/component-wrap";
+@import "scss/components";
+
+@import "scss/print";
+@import "scss/popup-page";
+//@import "easy-invoice-mpdf";
+
+.easy-invoice-wrap {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+  margin: 20px auto;
+  position: relative;
+  display: block;
+  padding: 20px 30px;
+
+  p {
+	margin: 0;
+  }
+}

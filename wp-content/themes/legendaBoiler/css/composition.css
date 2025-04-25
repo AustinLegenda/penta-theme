@@ -1,0 +1,345 @@
+@charset "utf-8";
+
+/*
+Composition
+Main & repeating composition of Elements and blocks
+*/
+/**
+ **grid templates
+ **/
+.main-grid {
+  display: grid;
+  grid-template-columns: [col-first] 30px [col-1] 33% [col-2] auto [col-3] 33% [col-4] 30px [col-last];
+  grid-template-rows: [row-first] 30px [row-1] auto [row-2] auto [row-3] auto [row-4] auto [row-5] 30px [row-last];
+}
+
+/*margin-to-margin*/
+.main-grid-full {
+  grid-column: col-1/span 3;
+}
+
+/*screen width*/
+.main-grid-bleed {
+  grid-column: col-first/col-last;
+  grid-row: row-first/row-last;
+}
+
+.grid-top {
+  grid-row: row-1;
+}
+
+.grid-bottom {
+  grid-row: row-4;
+}
+
+.grid-left {
+  text-align: left;
+  grid-column: col-1;
+  place-self: start start;
+}
+
+.grid-right {
+  text-align: right;
+  grid-column: col-3;
+  place-self: end end;
+}
+
+.grid-bottom-right {
+  text-align: right;
+  grid-column: col-1/col-4;
+}
+
+.one-col {
+  grid-row: 4;
+  height: 100vh;
+}
+
+
+
+/* Hero and Nav
+   ========================================================================== */
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#LogoType {
+  z-index: 2;
+}
+
+#TagAndTitle {
+  z-index: 0;
+  margin-bottom: 15px;
+}
+
+/*Above the fold*/
+.hero-img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*navigation*/
+nav {
+  z-index: 1;
+  grid-column: col-3;
+  grid-row: row-1;
+  place-self: center end;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+
+
+/* Portfolio
+     ========================================================================== */
+/**
+   * below the fold
+   */
+
+.folio-wrapper {
+  margin: 75px 30px 0 30px;
+}
+
+.folio-container {
+  margin-bottom: 30px;
+  display: grid;
+  grid-gap: 15px;
+}
+
+.item-folio {
+  grid-row: auto;
+}
+
+.folio-snippet {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66%;
+  margin-bottom: 50px;
+}
+
+a.folio-els-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.folio-intro {
+  height: clamp(30px, 60px, 120px);
+}
+
+
+/*.item-folio:nth-of-type(1) {
+    grid-row: 1/3;
+  }
+  
+  .item-folio:nth-of-type(1) img {
+    height: 100%;
+    width:100%;
+  }*/
+/* Folio Feed
+     ========================================================================== */
+/* template for portfolio feed */
+.work-container {
+  padding: 30px 0 30px 0;
+}
+
+.work-cat-container {
+  display: grid;
+  grid-template-rows: repeat(1, auto);
+  grid-template-columns: repeat(4, auto);
+}
+
+.work-feed-container {
+  grid-column: 1/5;
+  grid-row: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 30px;
+  overflow-x: scroll;
+  padding: 15px 0 30px 0;
+}
+
+.work-cat-container a img {
+  object-fit: cover;
+  height: 198px;
+  width: 300px;
+}
+
+.target-container{
+  width: 100%;
+max-width: 1400px;
+place-self: center;
+grid-row: 4;
+}
+
+
+/* Blog Feed
+     ========================================================================== */
+/* template for blog feed */
+
+.post-container,
+.blog-post-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px;
+}
+
+.post-img-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+}
+
+.post-intro {
+  height: clamp(125px, 150px, 175px);
+}
+
+
+
+/* Scondary Navigaiton
+     ========================================================================== */
+/* secondary navigation container */
+.cat-menu-container-work {
+  grid-row: 3;
+  margin-top: 60px;
+  
+}
+.cat-menu-container
+{
+  grid-row: 3;
+  margin-top: 30px;
+}
+
+.cat-menu-container ul, .cat-menu-container-work ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+
+/* single pages
+     ========================================================================== */
+/* template for single-posts */
+article {
+  width: 100%;
+  max-width: 1400px;
+  place-self: center;
+  grid-row: 4;
+  margin-top: 60px;
+}
+
+article main{
+  display:grid;
+  gap:16px;
+}
+
+.avatar-wrapper {
+  max-width: clamp(200px, 400px, 500px);
+  height: 400px;
+  overflow: clip;
+  grid-row: 5;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  object-fit: cover;
+
+}
+
+header .wp-block-columns {
+  margin-bottom: 27px;
+}
+
+/*single page images*/
+
+
+
+
+/* Contact Page
+     ========================================================================== */
+/**
+   * Page Template
+   */
+
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  grid-gap: 15px;
+}
+
+.wpcf7-form-control {
+  width: clamp(200px, 700px, 100%);
+  min-height: 36px;
+  box-shadow: -7px 9px 8px -10px #777;
+  -webkit-appearance: none
+}
+
+input,
+textarea {
+  border: none;
+  padding: 15px;
+}
+
+button,
+[type="submit"] {
+  width: clamp(50px, 150px, 100%);
+  height: 24px;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fcfcfc;
+  font-weight: 600;
+  transition: .7s;
+  padding: 1px;
+  font-size: clamp(.5em, 16px, 1.5em);
+  box-shadow: -5px 7px 6px -5px #777;
+  letter-spacing: 1px;
+
+}
+
+button,
+[type="submit"]:active {
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  box-shadow: none;
+}
+
+/* Footer
+     ========================================================================== */
+/**
+   * footer
+   */
+.footer-container {
+  justify-content: space-between;
+  align-items: unset;
+  gap: 0;
+}
+
+.footer-widget.grid-left,
+.footer-widget.grid-right {
+  grid-column: col-1/span 3;
+  place-self: center;
+  grid-gap: 15px;
+}
+
+.footer-widget.grid-left {
+  text-align: center;
+  grid-row: row-1;
+  margin-bottom: 30px;
+}
+
+.footer-widget.grid-right {
+  grid-row: row-2;
+}

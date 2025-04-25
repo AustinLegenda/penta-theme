@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #F2F1EF;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #4f6dff;
+  text-decoration: none;
+
+  &:hover {
+	text-decoration:underline;
+  }
+}

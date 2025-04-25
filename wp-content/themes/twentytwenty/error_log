@@ -1,0 +1,28 @@
+[08-Apr-2024 23:17:21 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php on line 10
+[09-Apr-2024 03:18:56 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php on line 10
+[09-Apr-2024 20:27:11 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php on line 10
+[12-Apr-2024 05:49:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php on line 10
+[10-May-2024 18:26:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/legenda1/public_html/wp-content/themes/twentytwenty/404.php on line 10
+[25-May-2024 15:31:56 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/legenda1/public_html/wp-content/themes/twentytwenty/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/legenda1/public_html/wp-content/themes/twentytwenty/index.php on line 17
+[28-May-2024 19:08:04 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/legenda1/public_html/wp-content/themes/twentytwenty/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/legenda1/public_html/wp-content/themes/twentytwenty/index.php on line 17

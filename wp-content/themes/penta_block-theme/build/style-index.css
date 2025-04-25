@@ -1,0 +1,1458 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/* 3rd party packages */
+/*@import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";*/
+/* SASS and Global'ish Stuff */
+/*
+Composition
+Main & repeating composition of Elements and blocks
+*/
+/**
+ **grid templates
+ **/
+.main-grid {
+  display: grid;
+  grid-template-columns: [col-first] 30px [col-1] 33% [col-2] auto [col-3] 33% [col-4] 30px [col-last];
+  grid-template-rows: [row-first] 30px [row-1] auto [row-2] auto [row-3] auto [row-4] auto [row-5] 30px [row-last];
+}
+
+/*margin-to-margin*/
+.main-grid-full {
+  grid-column: col-1/span 3;
+}
+
+/*screen width*/
+.main-grid-bleed {
+  grid-column: col-first/col-last;
+  grid-row: row-first/row-last;
+}
+
+.grid-top {
+  grid-row: row-1;
+}
+
+.grid-center {
+  grid-row: row-2;
+}
+
+.grid-bottom {
+  grid-row: row-4;
+}
+
+.grid-bottom-center {
+  grid-column: col-2/col-3;
+  grid-row: row-4;
+  text-align: center;
+}
+
+.grid-left {
+  text-align: left;
+  grid-column: col-1;
+  place-self: start start;
+}
+
+.grid-center-left {
+  text-align: left;
+  grid-column: col-1;
+  grid-row: row-first/row-last;
+  place-self: center start;
+}
+
+.grid-center-center {
+  text-align: center;
+  grid-column: col-2;
+  grid-row: row-first/row-last;
+  place-self: center center;
+}
+
+.grid-center-right {
+  text-align: right;
+  grid-column: col-3;
+  grid-row: row-first/row-last;
+  place-self: center end;
+}
+
+.grid-right {
+  text-align: right;
+  grid-column: col-3;
+  place-self: end end;
+}
+
+.grid-bottom-right {
+  text-align: right;
+  grid-column: col-1/col-4;
+}
+
+.one-col {
+  grid-row: 4;
+  height: 100vh;
+}
+
+.is-not-wide {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Hero and Nav
+   ========================================================================== */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#LogoType {
+  z-index: 2;
+}
+
+#TagAndTitle {
+  z-index: 0;
+  margin-bottom: 15px;
+}
+
+/*Above the fold*/
+.hero-img {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*navigation*/
+nav {
+  z-index: 1;
+  grid-column: col-3;
+  grid-row: row-1;
+  place-self: center end;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Folio Feed
+     ========================================================================== */
+/* template for portfolio feed */
+.work-container {
+  padding: 30px 0 30px 0;
+}
+
+.work-cat-container {
+  display: grid;
+  grid-template-rows: repeat(1, auto);
+  grid-template-columns: repeat(4, auto);
+}
+
+.work-feed-container {
+  grid-column: 1/5;
+  grid-row: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 30px;
+  overflow-x: scroll;
+  padding: 15px 0 30px 0;
+}
+
+.work-cat-container a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 198px;
+  width: 300px;
+}
+
+/* Blog Feed
+     ========================================================================== */
+/* template for blog feed */
+.post-container,
+.blog-post-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px;
+}
+
+.post-img-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+}
+
+.post-intro {
+  height: 150px;
+}
+
+/* Scondary Navigaiton
+     ========================================================================== */
+/* secondary navigation container */
+.cat-menu-container {
+  grid-row: 3;
+  margin-top: 30px;
+}
+
+.cat-menu-container ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+/* single pages
+     ========================================================================== */
+/* template for single-posts */
+article {
+  width: 100%;
+  max-width: 1400px;
+  place-self: center;
+  grid-row: 4;
+  /* margin-top: 60px; */
+}
+
+article main {
+  display: grid;
+  gap: 16px;
+}
+
+.avatar-wrapper {
+  max-width: 400px;
+  height: 400px;
+  overflow: clip;
+  grid-row: 5;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .penta-article-group {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16;
+  margin-bottom: 27px;
+}
+
+.penta-article-column {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+/*single page images*/
+/* Contact Page
+     ========================================================================== */
+/**
+   * Page Template
+   */
+.span-left, .span-right {
+  grid-column: span 3 !important;
+}
+
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  grid-gap: 15px;
+}
+
+.wpcf7-form-control {
+  width: clamp(200px, 700px, 100%);
+  min-height: 36px;
+  box-shadow: -7px 9px 8px -10px #777;
+  -webkit-appearance: none;
+}
+
+input,
+textarea {
+  border: none;
+  padding: 15px;
+}
+
+button,
+[type=submit] {
+  width: clamp(50px, 150px, 100%);
+  height: 24px;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fcfcfc;
+  font-weight: 600;
+  transition: 0.7s;
+  padding: 1px;
+  font-size: clamp(0.5em, 16px, 1.5em);
+  box-shadow: -5px 7px 6px -5px #777;
+  letter-spacing: 1px;
+}
+
+button,
+[type=submit]:active {
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  box-shadow: none;
+}
+
+/* Footer
+     ========================================================================== */
+/**
+   * footer
+   */
+.footer-container {
+  justify-content: space-between;
+  align-items: unset;
+  gap: 0;
+}
+
+.footer-widget.grid-left,
+.footer-widget.grid-right {
+  grid-column: col-1/span 3;
+  place-self: center;
+  grid-gap: 15px;
+}
+
+.footer-widget.grid-left {
+  text-align: center;
+  grid-row: row-1;
+  margin-bottom: 30px;
+}
+
+.footer-widget.grid-right {
+  grid-row: row-2;
+}
+
+/* Editor Styles
+     ========================================================================== */
+/**
+   * 
+   */
+.bg-img {
+  width: 100%;
+  height: 100vh;
+}
+
+/* 
+Utilies
+classes that are used once or do one thing really well
+"Too many utilities is like pouring concrete over your design"
+*/
+/*folio-grid*/
+.auto-row {
+  grid-row: auto !important;
+}
+
+.one-col {
+  grid-template-columns: repeat(1, auto);
+}
+
+/**
+**Specific Classes
+**/
+.three_two {
+  width: 1400px;
+  height: auto;
+}
+
+.pagination {
+  padding-top: 5.75em;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.nav-overlay {
+  height: 100vh;
+  width: 0;
+  position: absolute;
+  /* bottom: 10%; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-control-btns {
+  z-index: 1;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 30px;
+}
+
+.out-of-step {
+  z-index: 1;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+}
+
+/**
+**VISIBILITY
+**/
+.opaque {
+  opacity: 1 !important;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.open {
+  width: 100%;
+}
+
+.close {
+  width: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show-grid {
+  display: grid;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fcfcfc;
+  color: #222;
+}
+
+/**
+*
+**Typography
+*
+**/
+.logo-type {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: clamp(25.34px, 3vw, 41px);
+  min-height: 0vw;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+}
+
+nav li a {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+ul {
+  font-size: clamp(12px, 3vw, 14px);
+  min-height: 0vw;
+}
+
+body {
+  font-family: "Libre Franklin", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+/*.tag,
+.title {
+  font-weight: 500;
+}
+
+.title {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: clamp(56px, 3vw, 72px);
+  min-height: 0vw;
+  line-height: 1em;
+}
+
+.tag {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: clamp(1.5em, 3vw, 2.5em);
+   min-height: 0vw;
+}*/
+h1,
+h2 {
+  font-weight: normal;
+}
+
+h1 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: clamp(33.59px, 3vw, 55px) !important;
+  min-height: 0vw;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: normal;
+  margin: 0 !important;
+}
+
+h2 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: clamp(31.45px, 3vw, 48px);
+  min-height: 0vw;
+}
+
+.wp-block-post-excerpt p, h3 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 25.34px;
+  font-weight: 500;
+}
+
+h4,
+label {
+  font-family: "Open Sans", Arial, sans-serif;
+  padding: 10px 0 15px 0;
+  font-size: clamp(16px, 3vw, 19px);
+  min-height: 0vw;
+  font-weight: 400;
+}
+
+h5,
+.wp-block-post-terms a,
+.wp-block-post-terms .wp-block-post-terms__separator,
+.wp-block-post-navigation-link {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: clamp(11.74px, 3vw, 19px);
+  min-height: 0vw;
+  font-weight: 400;
+  color: rgb(153, 153, 153);
+}
+
+h6 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 0;
+}
+
+article h3 {
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none !important;
+  color: unset;
+}
+
+main a {
+  text-decoration: underline;
+}
+
+p {
+  max-width: 700px;
+  margin: 2em 0 2em 0;
+  font-size: clamp(12px, 3vw, 14px);
+  min-height: 0vw;
+}
+
+.textwidget {
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
+  min-height: 0vw;
+}
+
+figcaption {
+  font-size: 12px;
+  color: grey;
+  text-align: center;
+}
+
+main li {
+  list-style-type: disc;
+}
+
+.cat-menu-container ul li a {
+  font-family: "EB Garamond", Garamond, Baskerville, "Times New Roman", serif;
+  font-size: clamp(0.5em, 3vw, 1.5em);
+  min-height: 0vw;
+  font-weight: bold;
+}
+
+.work-feed-container h2 {
+  padding-top: clamp(0.5em, 3vw, 1em);
+  min-height: 0vw;
+}
+
+/**
+*
+**color-pallette 
+*
+**/
+.black {
+  color: #222;
+}
+
+.white {
+  color: #fcfcfc !important;
+}
+
+s .targets.background--light {
+  color: #222;
+}
+
+.targets.background--dark {
+  color: #fcfcfc;
+}
+
+.targets.background--complex {
+  color: #fcfcfc;
+}
+
+/*|------------------------------Buttons*/
+/*div-buttons*/
+.nav-control:hover {
+  cursor: pointer;
+}
+
+.btns:hover {
+  cursor: pointer;
+}
+
+.btns {
+  position: sticky;
+  grid-row: 1;
+  z-index: 5;
+  place-self: center;
+  transition: 0.5s;
+  padding: 15px;
+}
+
+.slide-left {
+  grid-column: 1;
+}
+
+.slide-right {
+  grid-column: 4;
+}
+
+/*chevrons*/
+[class*=chevron-] {
+  color: rgba(78, 78, 78, 0.8);
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  /* height: 22px; */
+  border: 2px solid transparent;
+  border-radius: 25px;
+}
+
+[class*=chevron-]::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-bottom: 8px solid;
+  border-left: 8px solid;
+  bottom: 0;
+}
+
+.chevron-left::after {
+  transform: rotate(45deg);
+  left: 15px;
+}
+
+.chevron-right::after {
+  transform: rotate(-135deg);
+  right: 15px;
+}
+
+[class*=chevron-]:hover {
+  color: #fcfcfc;
+}
+
+/*|------------------------------scrollbar*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*|------------------------------end-scrollbar*/
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  scroll-behavior: smooth;
+  font-size: 1em;
+}
+
+/* Sections
+   ========================================================================== */
+/*single post image*/
+.post-intro h3 {
+  height: 50px;
+  padding: 15px 0 15px 0;
+}
+
+[class*=item-] img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*blog post images*/
+.post-item img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* column blocks with images */
+.wp-block-column {
+  flex-basis: unset;
+}
+
+.fig-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.fig-wrapper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.fig-container {
+  position: relative;
+  width: 100%;
+}
+
+.size-l_three_two .fig-container,
+.size-m_three_two .fig-container,
+.size-s_three_two .fig-container,
+.size-full .fig-container {
+  padding-bottom: 66%;
+}
+
+.size-l_four_three .fig-container,
+.size-m_four_three .fig-container,
+.size-s_four_three .fig-container {
+  padding-bottom: 75%;
+}
+
+.size-l_sixteen_nine .fig-container,
+.size-m_sixteen_nine .fig-container,
+.size-s_sixteen_nine .fig-container {
+  padding-bottom: 56%;
+}
+
+.size-l_one_one .fig-container,
+.size-m_one_one .fig-container,
+.size-s_one_one .fig-container {
+  padding-bottom: 100%;
+}
+
+/* .wp-block-image img{
+width:1400px;
+height:auto;
+object-fit:cover;
+} */
+/* .wp-block-gallery.has-nested-images{
+  display:grid;
+  grid-gap: 15px;
+}
+
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image):first-child:nth-last-child(2), .wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image):first-child:nth-last-child(2)~figure.wp-block-image:not(#individual-image),.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image) {
+  margin-right: 0;
+  width: auto;
+}*/
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+  background: transparent;
+  bottom: unset;
+  color: grey;
+  font-size: 12px;
+  left: unset;
+  margin-bottom: 1em;
+  max-height: unset;
+  overflow: unset;
+  padding: unset;
+  position: unset;
+  text-align: center;
+  width: unset;
+  box-sizing: none;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+li,
+ul {
+  list-style-type: none;
+  text-decoration: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+/* textarea {
+  overflow: auto;
+} */
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+/*::-moz-selection {
+
+  text-shadow: none;
+}
+
+::selection {
+
+  text-shadow: none;
+}*/
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* @media screen {
+  a {
+    background-color: transparent;
+    text-decoration: none;
+    color: unset;
+  }
+} */
+/* 
+Exceptions
+media queries, alternative states, changes to default WP styles 
+*/
+/*remove padding for wp-block-text*/
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+  padding: 0 0 0 15px;
+  max-width: 700px;
+}
+
+/*social link widget alterations*/
+.wp-block-social-links {
+  gap: 30px;
+  justify-content: flex-end;
+}
+
+.wp-social-link.wp-social-link.wp-social-link {
+  margin: 0 !important;
+}
+
+.wp-block-social-links .wp-social-link a {
+  padding: 0 !important;
+}
+
+@media (orientation: portrait) {
+  #TagAndTitle {
+    margin-bottom: calc(60px + env(safe-area-inset-bottom));
+  }
+}
+/*make galleries single columns full width*/
+.wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+  width: calc(100% - var(--wp--style--unstable-gallery-gap, 16px) * 0.5) !important;
+}
+
+/* 
+*************
+*breakpoints 
+*************
+*/
+@media only screen and (min-width: 470px) {
+  /*.post-container,
+   .blog-post-container {
+     grid-template-columns: repeat(2, 1fr);
+   }*/
+  /**
+  TYPO
+  **/
+  nav li a {
+    font-size: clamp(16px, 3vw, 22px);
+    min-height: 0vw;
+  }
+  h3 {
+    font-size: clamp(16.69px, 3vw, 27px);
+    min-height: 0vw;
+  }
+  .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+    padding: 15px 0 0 0;
+  }
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 600px) {
+  main p {
+    width: 50%;
+    margin-left: 50%;
+  }
+  .footer-widget.grid-left,
+  .footer-widget.grid-right {
+    grid-row: row-2;
+    text-align: left;
+    margin: 0;
+  }
+  .footer-widget.grid-left {
+    grid-column: col-1;
+    place-self: end start;
+  }
+  .footer-widget.grid-right {
+    grid-column: col-3;
+    place-self: center end;
+  }
+}
+@media only screen and (min-width: 750px) {
+  /* header div:nth-child(2) {
+    max-width: 50%;
+    width: 700px;
+  } */
+  .nav-items {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 875px) {
+  .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+    width: calc(50% - var(--wp--style--unstable-gallery-gap, 16px) * 0.5) !important;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .span-left {
+    grid-column: span 1 !important;
+  }
+  .span-right {
+    grid-column: span 2 !important;
+  }
+  .post-container,
+  .blog-post-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .reverse {
+    grid-column: 3;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .main-grid {
+    grid-template-columns: [col-first] 60px [col-1] 33% [col-2] auto [col-3] 33% [col-4] 60px [col-last];
+    grid-template-rows: [row-first] 60px [row-1] auto [row-2] auto [row-3] auto [row-4] auto [row-5] 60px [row-last];
+  }
+  /*   article {
+      margin-top: 120px;
+    } */
+}
+
+/*# sourceMappingURL=style-index.css.map*/

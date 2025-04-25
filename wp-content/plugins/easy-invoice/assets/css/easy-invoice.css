@@ -1,0 +1,597 @@
+/***
+*
+**Legenda Typography
+*
+***/
+
+.logo-type {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: clamp(25.34px, 3vw, 41px);
+  font-weight: 400;
+  letter-spacing: 2.5px;
+}
+
+body {
+  font-family: "Libre Franklin", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  background-color: #fcfcfc;
+  color: #222;
+}
+
+h1 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: clamp(33.59px, 3vw, 55px);
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: normal;
+}
+
+h2 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: clamp(31.45px, 3vw, 48px);
+}
+
+h3 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 25.34px;
+}
+
+h4,
+label {
+  font-family: "Open Sans", Arial, sans-serif;
+  padding: 10px 0 15px 0;
+  font-size: clamp(16px, 3vw, 19px);
+  font-weight: 400;
+}
+
+h5 {
+  font-family: "Open Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(9px, 3vw, 12px);
+  font-weight: 400;
+  color: #808080;
+  margin-block-start: 0.42em;
+  margin-block-end: 0.42em;
+}
+
+h6 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: unset;
+}
+main a {
+  text-decoration: underline;
+}
+
+p, ul, li {
+  font-size: clamp(12px, 3vw, 14px);
+}
+
+p{
+  margin:0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  /* color: #4f6dff; */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+hr {
+  border: none;
+  height: 2px;
+  color: #222;
+  background-color: #222;
+}
+/* hr.double {
+  background-color: #fcfcfc;
+  margin: 0 0 45px 0;
+  max-width: 600px;
+  border-width: 0;
+  height: 5px;
+  border-top: 1px solid #222;
+  border-bottom: 2px solid #222;
+} */
+
+/***
+*
+**Legenda (lei) composition
+*
+***/
+.lei-detail {
+  line-height: 1.2em;
+  }
+  .total-due{
+    padding-top:15px;
+  }
+
+.lei-section {
+  margin: 15px 0;
+}
+
+.lei-td {
+  padding: 0;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.lei-job-description{
+  max-width:700px;
+}
+
+/***
+*
+**End
+*
+***/
+/***
+*
+**Easy Invoice Styles
+*
+***/
+.ei-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.ei-flex .ei-flex-1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.ei-flex .ei-flex-3 {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.ei-component-wrap {
+  padding: 15px 0;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.ei-loading {
+  position: fixed;
+  min-height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.easy-invoice-hide {
+  display: none;
+}
+
+.ei-invoice-error {
+  background: #fff3f3;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 15px;
+  border: 1px solid #ff6363;
+  color: #700c0c;
+  font-size: 15px;
+}
+
+.ei-header-wrap {
+  display: inline-block;
+  width: 100%;
+}
+
+.ei-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1170px;
+}
+
+@media (max-width: 1169px) {
+  .ei-container {
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+.ei-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: block;
+}
+
+.ei-50 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  vertical-align: top;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  /*border: 1px solid #ccc;*/
+}
+table th,
+table .title {
+  /*border: 1px solid #ccc;*/
+  vertical-align: top;
+  /*background: #ededed none repeat scroll 0 0;*/
+  padding: 12px 8px;
+}
+
+table tbody tr td {
+  padding: 8px;
+}
+.section-header-title {
+  padding: 36px 0 0 0;
+}
+.line-item-style {
+  padding: 0;
+}
+.indent {
+  text-indent: 1.3em;
+}
+.double-solid {
+  padding:1px;
+  border-top: 1px solid #222;
+  border-bottom: 2px solid #222;
+}
+
+.single-solid {
+  border-top: 1.5px solid #222;
+}
+
+.ei-invoice-totals table tbody tr td {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.totals-table{
+  width:26%; margin-right:0px; margin-left:auto;
+  }
+
+button,
+.ei-button {
+  padding: 5px 20px;
+  background: #ffffff;
+  border: 2px solid #4f6dff;
+  cursor: pointer;
+  color: #4f6dff;
+  border-radius: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  line-height: 1.4;
+  text-decoration: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+button:hover,
+.ei-button:hover {
+  background: #4f6dff;
+  color: #fff;
+  text-decoration: none;
+}
+button.disabled,
+.ei-button.disabled {
+  background: #f2f1ef;
+  color: #aaa;
+  border-color: #aaa;
+  cursor: not-allowed;
+}
+button.success,
+.ei-button.success {
+  background: #efffef;
+  color: #00c300;
+  border-color: #00c300;
+}
+button.error,
+.ei-button.error {
+  background: #ffefef;
+  color: #c30000;
+  border-color: #c30000;
+}
+button.xl,
+.ei-button.xl {
+  padding: 15px 50px;
+}
+button.disabled,
+.ei-button.disabled {
+  background: #f9f9f9;
+  border-color: #ddd;
+  color: #ccc;
+}
+
+.easy-invoice-top-bar {
+  background: #fff none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+}
+
+.ei-terms-component-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* border: 1px solid #ddd;
+  background: #f9f9f9;*/
+}
+
+.ei-component-has-bg {
+  margin-top: 20px;
+}
+
+.ei-business-logo {
+  max-width: 300px;
+}
+
+.ei-title {
+  text-align: right;
+}
+
+.ei-business {
+  text-align: center;
+}
+
+.terms-text {
+  width: 100%;
+  text-align: left;
+}
+
+.ei-invoice-items {
+  width: 100%;
+}
+
+table .service-name {
+  display: block;
+}
+
+table .service-description {
+  font-size: 14px;
+  display: block;
+  color: #858585;
+  margin-top: 10px;
+}
+
+.page-number {
+  text-align: right;
+  display: none;
+}
+
+@media print {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  .ei-no-print {
+    display: none;
+  }
+}
+
+.ei-popup-page-main-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+}
+.ei-popup-page-main-container .ei-popup-page-content-wrap {
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-height: 450px;
+  height: auto;
+  max-height: 100%;
+}
+.ei-popup-page-main-container .ei-popup-page-content {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+  margin: 20px auto;
+  position: relative;
+  display: block;
+  padding: 20px 30px;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+.ei-popup-page-main-container .ei-popup-page-content.ei-before-loading:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 9999999;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ei-popup-page-main-container .ei-popup-page-content p {
+  margin: 0;
+}
+.ei-popup-page-main-container h2 {
+  margin-left: -30px;
+  background: #ccc;
+  margin-right: -30px;
+  margin-top: -20px;
+  display: block;
+  padding: 5px 30px;
+  border-bottom: 1px solid #aaa;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.ei-popup-page-main-container .easy-invoice-payment-gateway {
+  margin: 0 0 15px 0;
+  list-style: none;
+  padding: 0;
+}
+.ei-popup-page-main-container .easy-invoice-payment-gateway li {
+  list-style: none;
+  margin-top: 3px;
+  padding: 10px;
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+}
+.ei-popup-page-main-container .easy-invoice-payment-gateway label,
+.ei-popup-page-main-container
+  .easy-invoice-payment-gateway
+  input[type="checkbox"],
+.ei-popup-page-main-container .easy-invoice-payment-gateway span {
+  cursor: pointer;
+}
+.ei-popup-page-main-container .easy-invoice-payment-gateway label {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5px;
+}
+.ei-popup-page-main-container
+  .easy-invoice-payment-gateway
+  input[type="radio"] {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  padding: 0;
+}
+.ei-popup-page-main-container .ei-close {
+  position: fixed;
+  right: 1px;
+  top: 19px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 2;
+  color: #000;
+  z-index: 99999;
+  cursor: pointer;
+}
+.ei-popup-page-main-container label {
+  display: block;
+  font-weight: bold;
+}
+.ei-popup-page-main-container textarea {
+  width: 100%;
+  height: 150px;
+  padding: 5px;
+}
+.ei-popup-page-main-container.decline-quote,
+.ei-popup-page-main-container.accept-quote {
+  display: none;
+}
+.ei-popup-page-main-container.active {
+  display: block;
+}
+
+.easy-invoice-wrap {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+  margin: 20px auto;
+  position: relative;
+  display: block;
+  padding: 20px 30px;
+}
+.easy-invoice-wrap p {
+  margin: 0;
+}
+/*# sourceMappingURL=easy-invoice.css.map */

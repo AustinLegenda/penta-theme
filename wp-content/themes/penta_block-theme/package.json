@@ -1,0 +1,25 @@
+{
+  "name": "penta_block-theme",
+  "version": "1.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start src/index.js penta-blocks/penta-header-hero.js penta-blocks/penta-header-block.js penta-blocks/penta-blog-block.js penta-blocks/penta-work-block.js",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "liscense": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "3.6.2",
+    "@wordpress/scripts": "^19.2.4",
+    "axios": "^1.7.2",
+    "normalize.css": "^8.0.1"
+  },
+  "directories": {
+    "doc": "doc"
+  },
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,121 @@
+/*!*******************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/style.css ***!
+  \*******************************************************************************************************************************************************************/
+@charset "utf-8";
+/*
+Composition
+Main & repeating composition of Elements and blocks
+*/
+.ppg-wrapper {
+  margin: auto;
+  max-width: 1400px;
+}
+
+.ppg-menu-container {
+  margin: 30px 0 30px 0;
+}
+.ppg-menu-container ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.ppg-item-wrapper {
+  margin-bottom: 30px;
+  display: grid;
+  grid-gap: 15px;
+}
+
+.ppg-item-size {
+  grid-row: auto;
+}
+
+.ppg-item-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66%;
+  margin-bottom: 50px;
+}
+
+a.ppg-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ppg-item-title {
+  height: clamp(30px, 60px, 120px);
+}
+
+.ppg-menu-wrapper {
+  margin-top: 60px;
+}
+/* 
+Utilies
+classes that are used once or do one thing really well
+"Too many utilities is like pouring concrete over your design"
+*/
+
+.one-col,
+.two-col,
+.one-third-col {
+  grid-template-columns: repeat(1, auto);
+}
+
+/* 
+Base
+The boiler plate foundation of all styles.
+*/
+a.ppg-item {
+  text-decoration: none;
+}
+
+/* 
+Exceptions
+media queries and alternative states
+*/
+
+@media only screen and (min-width: 600px) {
+  .--big {
+    grid-column: 1/3;
+  }
+
+  .two-col,
+  .one-third-col,
+  .three-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .one-third-col {
+    grid-template-columns: 50% auto auto;
+  }
+
+  .one-third-col-rev {
+    grid-template-columns: auto auto 50%;
+  }
+
+  .three-col {
+    grid-template-columns: auto auto auto;
+  }
+
+  .--big {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+
+  .--big .ppg-item-container {
+    padding-bottom: 0;
+    height: calc(100% - 50px);
+  }
+
+  .reverse {
+    grid-column: 3;
+  }
+}
+
+
+/*# sourceMappingURL=style-index.css.map*/

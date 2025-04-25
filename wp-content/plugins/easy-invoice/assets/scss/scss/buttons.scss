@@ -1,0 +1,50 @@
+button, .ei-button {
+  padding: 5px 20px;
+  background: #ffffff;
+  border: 2px solid #4f6dff;
+  cursor: pointer;
+  color: #4f6dff;
+  border-radius: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  line-height: 1.4;
+  text-decoration: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+
+  &:hover {
+	background: #4f6dff;
+	color: #fff;
+	text-decoration: none;
+  }
+
+  &.disabled {
+	background: #f2f1ef;
+	color: #aaa;
+	border-color: #aaa;
+	cursor: not-allowed;
+  }
+
+  &.success {
+	background: #efffef;
+	color: #00c300;
+	border-color: #00c300;
+  }
+
+  &.error {
+	background: #ffefef;
+	color: #c30000;
+	border-color: #c30000;
+  }
+
+  &.xl {
+	padding: 15px 50px;
+  }
+
+  &.disabled {
+	background: #f9f9f9;
+	border-color: #ddd;
+	color: #ccc;
+  }
+}

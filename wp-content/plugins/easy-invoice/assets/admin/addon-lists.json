@@ -1,0 +1,20 @@
+[
+  {
+	"title": "Easy Invoice Pro",
+	"slug": "easy-invoice-pro",
+	"name": "Easy Invoice Pro",
+	"image": "addons/easy-invoice-pro.png",
+	"excerpt": "Easy Invoice Pro is the premium version of the Easy Invoice WordPress invoicing plugin. This extend features like export invoice csv, restrict invoice to client, client area with shortcode etc.",
+	"plan": [
+	]
+  },
+  {
+	"title": "Easy Invoice AuthorizeNet",
+	"slug": "easy-invoice-authorizenet",
+	"name": "Easy Invoice AuthorizeNet",
+	"image": "addons/easy-invoice-authorizenet.png",
+	"excerpt": "Easy Invoice AuthorizeNet is a premium addon to the Easy Invoice WordPress plugin. This is a payment gateway addon for the Easy Invoice plugin. This is a gateway of authorize.net.",
+	"plan": [
+	]
+  }
+]

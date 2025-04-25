@@ -1,0 +1,20 @@
+# WordPress Core
+wp-admin/
+wp-includes/
+
+# Sensitive Files
+wp-config.php
+
+# Uploads & Backups
+wp-content/uploads/
+*.zip
+*.tar.gz
+*.log
+
+# Dependency Junk
+node_modules/
+vendor/
+
+# System Files
+.DS_Store
+Thumbs.db

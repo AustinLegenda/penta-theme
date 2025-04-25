@@ -1,0 +1,61 @@
+.ei-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .ei-flex-1 {
+	flex: 1;
+  }
+
+  .ei-flex-3 {
+	flex: 3;
+  }
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.ei-component-wrap {
+  padding: 15px 0;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.ei-loading {
+  position: fixed;
+  min-height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.easy-invoice-hide {
+  display: none;
+}
+
+.ei-invoice-error {
+  background: #fff3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  border: 1px solid #ff6363;
+  color: #700c0c;
+  font-size: 15px;
+}
+

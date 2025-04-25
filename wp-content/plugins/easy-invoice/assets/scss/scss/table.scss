@@ -1,0 +1,36 @@
+table {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  vertical-align: top;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  /*border: 1px solid #ccc;*/
+
+  th, .title {
+	/*border: 1px solid #ccc;*/
+	vertical-align: top;
+	background: #ededed none repeat scroll 0 0;
+	padding: 12px 8px;
+  }
+
+  thead {
+	tr:first-child {
+	  th {
+background-color:blue;
+	  }
+	}
+  }
+
+  tbody {
+	tr {
+	  td {
+		padding: 8px;
+		/*border: 1px solid #ccc;*/
+    
+	  }
+	}
+  }
+}
+

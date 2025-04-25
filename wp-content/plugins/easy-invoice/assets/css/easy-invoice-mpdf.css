@@ -1,0 +1,100 @@
+.totals-table {
+  width: 26%;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+td.double-solid {
+  border-bottom: 1.5px solid #222;
+}
+
+h5 {
+  margin: 7px 0;
+}
+
+.indent {
+  padding-left: 1.3em !important; /* Alternative to text-indent */
+  margin-left: 1.3em !important; /* If padding-left doesn’t work */
+  display: block !important; /* Ensures block behavior */
+}
+
+.ei-invoice-items table {
+  border-collapse: separate !important;
+  border-spacing: 5px !important;
+  width: 100%;
+}
+
+.ei-invoice-items td {
+  padding-left: 1.3em !important; /* Forces indent inside table cells */
+  vertical-align: top;
+}
+
+table {
+  border-collapse: separate !important;
+  border-spacing: 5px !important; /* Adds space between table cells */
+  width: 100%;
+}
+
+td {
+  padding: 10px !important;
+  vertical-align: top;
+}
+
+.logo-type {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 41px;
+  letter-spacing: 2.5px;
+}
+
+.ei-container {
+  width: 100%;
+  padding: 0;
+}
+
+.easy-invoice-top-bar {
+  display: none;
+}
+
+#easy-invoice-wrap {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  margin: 0;
+  border: none;
+  padding: 15px 1.5cm;
+}
+
+.easy-invoice-content-area {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  /* display: block; */
+}
+
+.ei-invoice-header h1 {
+  background: transparent;
+  font-size: 26px;
+}
+
+.lei-items-total {
+  width: 49.99%;
+  float: right;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+.service-name {
+  display: block;
+}
+
+.service-description {
+  display: block;
+  color: #858585;
+  margin-top: 8px;
+}
+
+/*.ei-business-logo {
+  max-height: 35px; }*/
+/*# sourceMappingURL=easy-invoice-mpdf.css.map */

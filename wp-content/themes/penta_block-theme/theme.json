@@ -1,0 +1,62 @@
+{
+	"version": 2,
+	"styles": {
+	  "blocks": {
+		"core/button": {
+		  "color": {
+			"text": "#FFFFFF",
+			"background": "var(--wp--preset--color--pizza)"
+		  }
+		}
+	  }
+	},
+	"settings": {
+	  "appearanceTools": true,
+	  "typography": {
+		"fontSizes": []
+	  },
+	  "spacing": {
+			  "padding": true,
+			  "margin": true,
+			  "units": [ "px", "em", "rem", "vh", "vw", "%" ]
+		  },
+	  "blocks": {
+		"core/button": {
+		  "border": {
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false
+		  }
+		}
+	  },
+	  "color": {
+		"palette": [
+		  {
+			"slug": "penta-black",
+			"color": "#222",
+			"name": "Black-ish"
+		  },
+		  {
+			"slug": "penta-white",
+			"color": " #fcfcfc",
+			"name": "White-ish"
+		  },
+		  {
+			"slug": "white",
+			"color": "#FFFFFF",
+			"name": "white"
+		  },
+		  {
+			"slug": "black",
+			"color": "#000000",
+			"name": "black"
+		  }
+		]
+	  },
+	  "layout": {
+		"contentSize": "840px"
+	  }
+	}
+  }
+  
