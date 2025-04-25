@@ -13,6 +13,7 @@ Main & repeating composition of Elements and blocks
 
 .ppg-menu-container {
   margin: 30px 0 30px 0;
+  place-self: auto;
 }
 .ppg-menu-container ul {
   display: flex;
