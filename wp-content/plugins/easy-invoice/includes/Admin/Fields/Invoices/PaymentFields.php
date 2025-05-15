@@ -109,7 +109,7 @@ class PaymentFields extends Base
 		$due_amount = $invoice->get_due_amount();
 		$total_paid = $invoice->get_total_paid();
 	
-		if ($total_paid >= $due_amount) {
+		if ($due_amount <= 0) {
 			error_log('[PaymentFields] Invoice is already fully paid.');
 			return;
 		}
