@@ -52,7 +52,7 @@ if (empty($all_ids)) {
     <ul>
       <li>
         <a class="ppg-menu-item" data-category="" href="#">
-          <h5>Test</h5>
+          <h5>All</h5>
         </a>
       </li>
       <?php foreach ($menu_items as $item) :
