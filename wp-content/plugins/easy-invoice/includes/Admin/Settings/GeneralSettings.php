@@ -91,11 +91,27 @@ If you prefer to have an item blank, you still need the | symbol like so: 1 | So
 1 | Banner Design | 30 | Homepage Banner for the website'
 			),
 			array(
+				'title' => __('Job Description Template', 'easy-invoice'),
+				'id' => '',
+				'desc' => __('REMINDER: Is this a job that expects creative collaboration or decisions to be made (full estimate) or is it clear that just a technical services is needed (mini estimate)?'),
+				'type' => 'textarea',
+				'editor' => true,
+				'allow-html' => true,
+				'editor_settings' => array(
+					'tinymce' => array(
+						'toolbar1' => 'bold,italic,underline,link,unlink,undo,redo',
+					),
+				),
+			),
+
+
+			array(
 				'type' => 'sectionend',
 				'id' => 'easy_invoice_general_settings',
 			),
 
 		);
+
 		return apply_filters('easy_invoice_get_settings_' . $this->id, $settings, $current_section);
 	}
 }
