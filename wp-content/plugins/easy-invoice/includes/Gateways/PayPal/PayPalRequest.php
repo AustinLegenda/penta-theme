@@ -56,6 +56,8 @@ class PayPalRequest
 
 		$amount = $payment->get_payable_amount();
 
+		//error_log('PayPal amount for payment ID ' . $payment_id . ': ' . $amount);
+
 		$thank_you_page_id = get_option('easy_invoice_thankyou_page');
 
 		$cancel_page_url = home_url();

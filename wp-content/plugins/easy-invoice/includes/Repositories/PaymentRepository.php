@@ -195,10 +195,17 @@ class PaymentRepository
 		return get_post_meta($this->payment_id, 'paid_amount', true);
 	}
 
-	public function get_payable_amount()
-	{
-		return floatval(get_post_meta($this->payment_id, 'payable_amount', true));
-	}
+public function get_payable_amount()
+{
+    $amount = get_post_meta($this->payment_id, 'payable_amount', true);
+
+    if ($amount === '' || $amount === null || floatval($amount) <= 0) {
+        $invoice = new InvoiceRepository($this->get_invoice_id());
+        return round($invoice->get_due_amount(), 2);
+    }
+
+    return floatval($amount);
+}
 
 	public function get_due_amount()
 	{
