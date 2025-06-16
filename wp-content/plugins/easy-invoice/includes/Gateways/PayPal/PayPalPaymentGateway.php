@@ -71,19 +71,36 @@ class PayPalPaymentGateway extends PaymentGatewayBase
 		return false;
 	}
 
-	public function process_payment($payment_id)
-	{
+public function process_payment($original_payment_id)
+{
+    // Load the original payment to extract invoice ID
+    $payment = new \MatrixAddons\EasyInvoice\Repositories\PaymentRepository($original_payment_id);
+    $invoice_id = $payment->get_invoice_id();
 
-		do_action('easy_invoice_before_payment_process', $payment_id);
+    if (!$invoice_id) {
+        wp_die(__('Invalid invoice ID.', 'easy-invoice'));
+    }
 
-		$paypal_request = new PayPalRequest();
+    // Create a fresh payment post with the correct payable amount
+    $new_payment_id = \MatrixAddons\EasyInvoice\Repositories\PaymentRepository::create($invoice_id, 'paypal');
 
-		$redirect_url = $paypal_request->get_request_url($payment_id, $this->id);
+    if (!$new_payment_id || is_wp_error($new_payment_id)) {
+        wp_die(__('Could not create payment.', 'easy-invoice'));
+    }
 
-		wp_redirect($redirect_url);
+    /**
+     * Optional: trigger pre-processing hook for plugins/extensions
+     */
+    do_action('easy_invoice_before_payment_process', $new_payment_id);
 
-		exit;
-	}
+    // Build the PayPal redirect
+    $paypal_request = new PayPalRequest();
+    $redirect_url = $paypal_request->get_request_url($new_payment_id, $this->id);
+
+    // Redirect user to PayPal
+    wp_redirect($redirect_url);
+    exit;
+}
 
 	public function register_webhook_api()
 	{
