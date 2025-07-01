@@ -1,9 +1,10 @@
 <hr>
 <table class="before-items-two | lei-section">
     <tr class="lei-tr">
-        <td class="lei-td"><?php easy_invoice_get_to_address(); ?></td>
-
-        <td class="lei-td | align-right">
+        <td class="lei-td | client-data "><?php easy_invoice_get_to_address(); ?></td>
+</tr>
+<tr class="lei-tr">
+        <td class="lei-td | invoice-data">
             <?php
             global $ei_invoice, $ei_quote;
 

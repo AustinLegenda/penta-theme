@@ -29,8 +29,8 @@ $line_items = $ei_invoice->get_line_items();
 				<?php } else { // Otherwise, render as a regular line item 
 				?>
 					<tr>
-						<td class="service line-item-style">
-							&nbsp;&nbsp;&nbsp;&nbsp;
+						<td class="service line-item-style" style="padding-left:17px;">
+							<!-- &nbsp;&nbsp;&nbsp;&nbsp;-->
 							<?php echo esc_html($line_item->get_quantity()); ?>
 							<?php echo esc_html($line_item->get_item_title()); ?>
 							<?php $qty_type = $line_item->get_qty_type();

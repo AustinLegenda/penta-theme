@@ -130,6 +130,9 @@ hr {
 .lei-td {
   padding: 0;
 }
+.invoice-data{
+  text-align:right;
+}
 
 .align-right {
   text-align: right;
@@ -138,6 +141,11 @@ hr {
 .lei-job-description{
   max-width:700px;
 }
+
+.client-data, .invoice-data{
+  width:50%;
+}
+
 
 /***
 *
@@ -595,3 +603,37 @@ table .service-description {
   margin: 0;
 }
 /*# sourceMappingURL=easy-invoice.css.map */
+
+/*legenda responsive*/
+
+@media 
+only screen and 
+(max-width: 768px)  {
+  .ei-title{
+    text-align:left;
+    margin-bottom:20px;
+  }
+.invoice-data{
+  text-align:unset;
+  padding-top: 20px;
+}
+.lei-detail {
+  display:flex;
+  flex-direction: column;
+  padding:12px 0 0 0;
+
+}
+.ei-empty-div{
+  display:none;
+}
+.ei-flex .ei-flex-1{
+  flex:none;
+}
+.service{
+  width: 65%;
+  padding:12px 0 0 0 !important;
+}
+
+
+  
+}
