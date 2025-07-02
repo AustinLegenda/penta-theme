@@ -70,12 +70,14 @@ main a {
   text-decoration: underline;
 }
 
-p, ul, li {
+p,
+ul,
+li {
   font-size: clamp(12px, 3vw, 14px);
 }
 
-p{
-  margin:0;
+p {
+  margin: 0;
 }
 
 h1,
@@ -118,10 +120,10 @@ hr {
 ***/
 .lei-detail {
   line-height: 1.2em;
-  }
-  .total-due{
-    padding-top:15px;
-  }
+}
+.total-due {
+  padding-top: 15px;
+}
 
 .lei-section {
   margin: 15px 0;
@@ -130,22 +132,22 @@ hr {
 .lei-td {
   padding: 0;
 }
-.invoice-data{
-  text-align:right;
+.invoice-data {
+  text-align: right;
 }
 
 .align-right {
   text-align: right;
 }
 
-.lei-job-description{
-  max-width:700px;
+.lei-job-description {
+  max-width: 700px;
 }
 
-.client-data, .invoice-data{
-  width:50%;
+.client-data,
+.invoice-data {
+  width: 50%;
 }
-
 
 /***
 *
@@ -314,7 +316,7 @@ table tbody tr td {
   text-indent: 1.3em;
 }
 .double-solid {
-  padding:1px;
+  padding: 1px;
   border-top: 1px solid #222;
   border-bottom: 2px solid #222;
 }
@@ -328,9 +330,11 @@ table tbody tr td {
   white-space: nowrap;
 }
 
-.totals-table{
-  width:26%; margin-right:0px; margin-left:auto;
-  }
+.totals-table {
+  width: 26%;
+  margin-right: 0px;
+  margin-left: auto;
+}
 
 button,
 .ei-button {
@@ -606,34 +610,28 @@ table .service-description {
 
 /*legenda responsive*/
 
-@media 
-only screen and 
-(max-width: 768px)  {
-  .ei-title{
-    text-align:left;
-    margin-bottom:20px;
+@media only screen and (max-width: 768px) {
+  .ei-title {
+    text-align: left;
+    margin-bottom: 20px;
   }
-.invoice-data{
-  text-align:unset;
-  padding-top: 20px;
-}
-.lei-detail {
-  display:flex;
-  flex-direction: column;
-  padding:12px 0 0 0;
-
-}
-.ei-empty-div{
-  display:none;
-}
-.ei-flex .ei-flex-1{
-  flex:none;
-}
-.service{
-  width: 65%;
-  padding:12px 0 0 0 !important;
-}
-
-
-  
+  .invoice-data {
+    text-align: unset;
+    padding-top: 20px;
+  }
+  .lei-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0 0 0;
+  }
+  .ei-empty-div {
+    display: none;
+  }
+  .ei-flex .ei-flex-1 {
+    flex: none;
+  }
+  .service {
+    width: 65%;
+    padding: 12px 0 0 0 !important;
+  }
 }
