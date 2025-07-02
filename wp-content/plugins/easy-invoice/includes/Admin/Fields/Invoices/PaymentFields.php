@@ -82,38 +82,38 @@ class PaymentFields extends Base
 	public function save($post_data, $post_id)
 	{
 		error_log('[PaymentFields] save() triggered');
-	
+
 		if (empty($post_data) || !check_admin_referer($this->nonce_id(), $this->nonce_id() . '_nonce')) {
 			error_log('[PaymentFields] Nonce check failed or post_data is empty.');
 			return;
 		}
-	
+
 		// Extract payment data
 		$payment_data = $post_data['easy_invoice_payment_items'] ?? [];
 		if (empty($payment_data)) {
 			error_log('[PaymentFields] No payment data submitted. Exiting.');
 			return;
 		}
-	
+
 		// Check if paid_amount is greater than 0
 		$paid_amount = floatval($payment_data['paid_amount'] ?? 0);
 		if ($paid_amount <= 0) {
 			error_log('[PaymentFields] paid_amount is 0 or not set. Skipping payment creation.');
 			return;
 		}
-	
+
 		error_log('[PaymentFields] Payment detected. Proceeding with payment creation.');
-	
+
 		// Retrieve invoice information
 		$invoice = new InvoiceRepository($post_id);
 		$due_amount = $invoice->get_due_amount();
 		$total_paid = $invoice->get_total_paid();
-	
+
 		if ($due_amount <= 0) {
 			error_log('[PaymentFields] Invoice is already fully paid.');
 			return;
 		}
-	
+
 		// Create or update the payment
 		$payment_id = isset($payment_data['payment_id']) ? absint($payment_data['payment_id']) : 0;
 		if ($payment_id > 0) {
@@ -129,15 +129,26 @@ class PaymentFields extends Base
 			}
 			$payment = new PaymentRepository($new_payment_id);
 		}
-	
+
 		// Update payment details
 		$payment->update_paid_amount($paid_amount);
-		$payment->update_payment_date($payment_data['payment_date']);
+		//$payment->update_payment_date($payment_data['payment_date']);
 		$payment->update_payment_gateway($payment_data['payment_gateway']);
 		$payment->update_transaction_id($payment_data['transaction_id']);
 		$payment->update_status($payment_data['status']);
+		//lei payment date
+		$raw_date = $payment_data['payment_date'] ?? '';
+		$normalized_date = '';
 
-	
+		if (!empty($raw_date)) {
+			$timestamp = strtotime($raw_date);
+			if ($timestamp !== false) {
+				$normalized_date = date('Y-m-d H:i:s', $timestamp);
+			}
+		}
+
+		$payment->update_payment_date($normalized_date);
+
 		error_log('[PaymentFields] Payment successfully processed.');
 	}
-		}
+}

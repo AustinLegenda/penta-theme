@@ -1,37 +1,37 @@
 // @var easyInvoiceAdminParams
 (function ($) {
-		//lei drag handle
-		$(".easy-invoice-line-item").each(function () {
-			if ($(this).find(".lei-drag-handle").length === 0) {
-				$(this).prepend('<div class="lei-drag-handle">☰</div>');
+	//lei drag handle
+	$(".easy-invoice-line-item").each(function () {
+		if ($(this).find(".lei-drag-handle").length === 0) {
+			$(this).prepend('<div class="lei-drag-handle">☰</div>');
+		}
+	});
+
+	// Enable sortable functionality
+	if ($.fn.sortable) {
+		$(".matrixaddons-repeater-wrapper").sortable({
+			handle: ".lei-drag-handle",
+			update: function (event, ui) {
+				let sortedIDs = $(this).sortable("toArray", { attribute: "data-id" });
+				console.log("New Order: ", sortedIDs); // Send this data via AJAX if needed
 			}
 		});
-	
-		// Enable sortable functionality
-		if ($.fn.sortable) {
-			$(".matrixaddons-repeater-wrapper").sortable({
-				handle: ".lei-drag-handle",
-				update: function (event, ui) {
-					let sortedIDs = $(this).sortable("toArray", { attribute: "data-id" });
-					console.log("New Order: ", sortedIDs); // Send this data via AJAX if needed
-				}
-			});
-		} else {
-			console.error("jQuery UI Sortable is not loaded.");
-		}
-	
-	
-//hide or show line-item options based on selection
+	} else {
+		console.error("jQuery UI Sortable is not loaded.");
+	}
+
+
+	//hide or show line-item options based on selection
 	$(document).ready(function () {
 		function toggleFields(parent, type) {
-			 if (type === 'header') {
-            parent.find('.section-header-group, .easy-invoice-section-title').show();
-            parent.find('.easy-invoice-line-item-1-wrap, .easy-invoice-line-item-2-wrap, .easy-invoice-predefined-line-items, .easy-invoice-line-item-title').hide();
-        } else {
-            parent.find('.section-header-group, .easy-invoice-section-title').hide();
-            parent.find('.easy-invoice-line-item-1-wrap, .easy-invoice-line-item-2-wrap, .easy-invoice-predefined-line-items, .easy-invoice-line-item-title').show();
-        }
-			
+			if (type === 'header') {
+				parent.find('.section-header-group, .easy-invoice-section-title').show();
+				parent.find('.easy-invoice-line-item-1-wrap, .easy-invoice-line-item-2-wrap, .easy-invoice-predefined-line-items, .easy-invoice-line-item-title').hide();
+			} else {
+				parent.find('.section-header-group, .easy-invoice-section-title').hide();
+				parent.find('.easy-invoice-line-item-1-wrap, .easy-invoice-line-item-2-wrap, .easy-invoice-predefined-line-items, .easy-invoice-line-item-title').show();
+			}
+
 		}
 
 		// Handle change event for Entry Type selection
@@ -416,10 +416,12 @@
 
 				}
 			});
-
+//lei
 			if (typeof $().flatpickr !== 'undefined') {
 				$('.easy-invoice-datepicker').flatpickr({
-					dateFormat: 'F d, Y'
+					altInput: true,
+					altFormat: 'F j, Y',       // what the user sees
+					dateFormat: 'Y-m-d H:i:S'  // what gets submitted
 				});
 			}
 		},
