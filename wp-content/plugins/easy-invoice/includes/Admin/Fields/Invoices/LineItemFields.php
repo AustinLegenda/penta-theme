@@ -79,7 +79,7 @@ class LineItemFields extends Base
 					'qty_type' => [
 						'type' => 'select',
 						'options' => [
-							'blank' => __('', 'easy-invoice'),
+							'' => __('Null', 'easy-invoice'),
 							'hour' => __('Hour(s)', 'easy-invoice'),
 							'day' => __('Day(s)', 'easy-invoice'),
 						],

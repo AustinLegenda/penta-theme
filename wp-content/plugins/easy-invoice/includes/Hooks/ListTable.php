@@ -25,6 +25,10 @@ class ListTable
 
 		add_filter('post_row_actions', array($this, 'row_link'), 10, 2);
 		add_filter('admin_action_clone_quote_invoice', array($this, 'row_actions'));
+
+		//lei sort payments by date
+		add_filter('manage_edit-easy-invoice-payment_sortable_columns', [$this, 'make_payment_columns_sortable']);
+		add_action('pre_get_posts', [$this, 'maybe_sort_by_payment_date']);
 	}
 
 	public function row_link($actions, $post)
@@ -242,10 +246,40 @@ class ListTable
 				echo '<p>' . esc_html($payment->get_note()) . '</p>';
 				break;
 			case "payment_date":
-				echo '<p>' . esc_html($payment->get_payment_date()) . '</p>';
+				//echo '<p>' . esc_html($payment->get_payment_date()) . '</p>';
+				$date = $payment->get_payment_date();
+				if ($date) {
+					echo '<p>' . esc_html(date('F j, Y', strtotime($date))) . '</p>';
+				}
+
 				break;
 		}
 	}
+
+	//lei sort by payment date
+
+	public function make_payment_columns_sortable($columns)
+	{
+		$columns['payment_date'] = 'payment_date'; // column key => meta key
+		return $columns;
+	}
+
+	public function maybe_sort_by_payment_date($query)
+	{
+		if (!is_admin() || !$query->is_main_query()) {
+			return;
+		}
+
+		if (
+			$query->get('post_type') === Constant::PAYMENT_POST_TYPE &&
+			$query->get('orderby') === 'payment_date'
+		) {
+			$query->set('meta_key', 'payment_date');
+			$query->set('orderby', 'meta_value'); // or 'meta_value_num' if it's stored as a timestamp
+		}
+	}
+
+
 
 	public function quote_column($columns)
 	{

@@ -136,6 +136,7 @@ class PaymentFields extends Base
 		$payment->update_payment_gateway($payment_data['payment_gateway']);
 		$payment->update_transaction_id($payment_data['transaction_id']);
 		$payment->update_status($payment_data['status']);
+
 	
 		error_log('[PaymentFields] Payment successfully processed.');
 	}
