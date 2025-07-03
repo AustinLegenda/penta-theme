@@ -34,6 +34,13 @@ class LineItemFields extends Base
 						'type' => 'wrap',
 						'class' => 'section-header-group',
 					],
+					'pre_defined_section_headers' => [
+						'title' => __('Predefined Section Title', 'easy-invoice'),
+						'type' => 'select',
+						'options' => easy_invoice_get_predefined_section_titles(),
+						'class' => 'easy-invoice-predefined-section-titles',
+						'name' => '',
+					],
 					'section_title' => [
 						'type' => 'text',
 						'title' => __('Section Title', 'easy-invoice'),
@@ -50,7 +57,7 @@ class LineItemFields extends Base
 						'class' => 'easy-invoice-line-item-pre-wrap',
 					],
 					'pre_defined_line_items' => [
-						'title' => __('Predefine Line Items', 'easy-invoice'),
+						'title' => __('Predefined Line Items', 'easy-invoice'),
 						'type' => 'select',
 						'options' => $pre_defined_line_items,
 						'class' => 'easy-invoice-predefined-line-items',

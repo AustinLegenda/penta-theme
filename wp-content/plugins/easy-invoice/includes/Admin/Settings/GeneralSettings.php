@@ -83,12 +83,19 @@ class GeneralSettings extends Setting_Base
 			array(
 				'title' => __('Pre-Defined Line Items', 'easy-invoice'),
 				'id' => 'easy_invoice_pre_defined_line_items',
-				'desc' => __('Add 1 line item per line in this format: Qty | Title | Price | Description. Each field separated with a | symbol.
+				'desc' => __('Add one line item per line in this format: Qty | Title | Price | Description. Each field separated with a | symbol.
 Price should be numbers only, no currency symbol.
 If you prefer to have an item blank, you still need the | symbol like so: 1 | Software Development | | Software development cost', 'easy-invoice'),
 				'type' => 'textarea',
 				'default' => '1 | Software Development | 150 | Development cost
 1 | Banner Design | 30 | Homepage Banner for the website'
+			),
+				array(
+				'title' => __('Pre-Defined Section Headers', 'easy-invoice'),
+				'id' => 'easy_invoice_pre_defined_section_titles',
+				'desc' => __('Add one section header title per line', 'easy-invoice'),
+				'type' => 'textarea',
+				'default' => "Fees\nEquipment\nLocations\nCrew\nPost-Production"
 			),
 			array(
 				'type' => 'sectionend',

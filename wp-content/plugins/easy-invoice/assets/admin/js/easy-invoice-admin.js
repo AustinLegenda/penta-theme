@@ -272,8 +272,22 @@
 				wrap.find('.easy-invoice-line-item-rate').val(selected.attr('data-price'));
 				wrap.find('.easy-invoice-line-item-description').val(selected.attr('data-desc'));
 				wrap.find('.easy-invoice-line-item-title').val(selected.text());
+				// Update the visible title in the repeater UI immediately
+				wrap.find('.matrixaddons-repeater-text').text(selected.text());
+				// Trigger recalculation
 				wrap.find('.easy-invoice-line-item-rate').trigger('keyup');
 			});
+			//lei predefind section headers
+			$('body').on('change', '.easy-invoice-predefined-section-titles', function () {
+				const selected = $(this).find(':selected');
+				const wrap = $(this).closest('.matrixaddons-repeater-item');
+				const title = selected.attr('data-title');
+
+				wrap.find('.easy-invoice-section-title').val(title);
+				wrap.find('.matrixaddons-repeater-text').text(title); // ← Manually update display
+			});
+
+
 		},
 		openFirstLineItem: function () {
 			$('.matrixaddons-repeater-wrapper').find('.matrixaddons-repeater-item').last().find('.matrixaddons-repeater-title').trigger('click');
@@ -352,6 +366,7 @@
 				update: function (event, ui) {
 					let sortedIDs = $(this).sortable("toArray", { attribute: "data-item-id" });
 					console.log("New Order: ", sortedIDs); // Send this data via AJAX if needed
+					EasyInvoiceAdmin.reindexRepeaterItems($(this));
 				}
 			});
 
@@ -416,7 +431,7 @@
 
 				}
 			});
-//lei
+			//lei
 			if (typeof $().flatpickr !== 'undefined') {
 				$('.easy-invoice-datepicker').flatpickr({
 					altInput: true,
