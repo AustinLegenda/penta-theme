@@ -68,14 +68,14 @@ class PaymentFields extends Base
 
 	public function render()
 	{
-		error_log('[PaymentFields] render() triggered');
+		//error_log('[PaymentFields] render() triggered');
 		$this->output();
 	}
 
 	public function nonce_id()
 	{
 		$nonce = 'easy_invoice_payment_fields_nonce';
-		error_log('[PaymentFields] nonce_id() returns: ' . $nonce);
+		//error_log('[PaymentFields] nonce_id() returns: ' . $nonce);
 		return $nonce;
 	}
 
@@ -110,21 +110,21 @@ class PaymentFields extends Base
 		$total_paid = $invoice->get_total_paid();
 
 		if ($due_amount <= 0) {
-			error_log('[PaymentFields] Invoice is already fully paid.');
+			//error_log('[PaymentFields] Invoice is already fully paid.');
 			return;
 		}
 
 		// Create or update the payment
 		$payment_id = isset($payment_data['payment_id']) ? absint($payment_data['payment_id']) : 0;
 		if ($payment_id > 0) {
-			error_log('[PaymentFields] Updating existing payment: ' . $payment_id);
+			//error_log('[PaymentFields] Updating existing payment: ' . $payment_id);
 			$payment = new PaymentRepository($payment_id);
 		} else {
-			error_log('[PaymentFields] Creating new payment for invoice: ' . $post_id);
+			//error_log('[PaymentFields] Creating new payment for invoice: ' . $post_id);
 			$payment_gateway = $payment_data['payment_gateway'] ?? '';
 			$new_payment_id = PaymentRepository::create($post_id, $payment_gateway);
 			if (!$new_payment_id) {
-				error_log('[PaymentFields] Payment creation failed.');
+				//error_log('[PaymentFields] Payment creation failed.');
 				return;
 			}
 			$payment = new PaymentRepository($new_payment_id);
@@ -149,6 +149,6 @@ class PaymentFields extends Base
 
 		$payment->update_payment_date($normalized_date);
 
-		error_log('[PaymentFields] Payment successfully processed.');
+		//error_log('[PaymentFields] Payment successfully processed.');
 	}
 }

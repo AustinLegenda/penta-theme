@@ -287,16 +287,19 @@
 				wrap.find('.matrixaddons-repeater-text').text(title); // ← Manually update display
 			});
 			//lei description template
-			jQuery(function ($) {
-				$('#easy_invoice_selected_template').on('change', function () {
-					var content = $(this).find(':selected').data('content') || '';
-					// set TinyMCE (if active)
-					if (typeof tinyMCE !== 'undefined' && tinyMCE.get('easy_invoice_description')) {
-						tinyMCE.get('easy_invoice_description').setContent(content);
-					}
-					// set fallback textarea
-					$('#easy_invoice_description').val(content);
-				});
+			document.addEventListener('DOMContentLoaded', function () {
+				const dropdown = document.getElementById('easy_invoice_selected_template');
+				const editor = window.tinymce?.get('easy_invoice_description');
+
+				if (dropdown && editor) {
+					dropdown.addEventListener('change', function () {
+						const selected = dropdown.options[dropdown.selectedIndex];
+						const content = selected.getAttribute('data-content') || '';
+						if (content && editor.getContent({ format: 'raw' }).trim() === '') {
+							editor.setContent(content);
+						}
+					});
+				}
 			});
 
 
