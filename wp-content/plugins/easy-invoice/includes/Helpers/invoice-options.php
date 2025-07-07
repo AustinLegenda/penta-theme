@@ -102,52 +102,59 @@ if (!function_exists('easy_invoice_get_predefined_line_items')) {
 			//lei predefined sections
 
 			if (!function_exists('easy_invoice_get_predefined_section_titles')) {
-	function easy_invoice_get_predefined_section_titles()
-	{
-		$headers_raw = get_option('easy_invoice_pre_defined_section_titles', "Production\nDesign\nPost-Production");
-		$lines = array_filter(array_map('trim', explode("\n", $headers_raw)));
+				function easy_invoice_get_predefined_section_titles()
+				{
+					$headers_raw = get_option('easy_invoice_pre_defined_section_titles', "Production\nDesign\nPost-Production");
+					$lines = array_filter(array_map('trim', explode("\n", $headers_raw)));
 
-		$options = [
-			['text' => __('Add a pre-defined section title', 'easy-invoice')],
-		];
+					$options = [
+						['text' => __('Add a pre-defined section title', 'easy-invoice')],
+					];
 
-		foreach ($lines as $line) {
-			$options[] = [
-				'text' => $line,
-				'data-title' => $line,
-			];
-		}
+					foreach ($lines as $line) {
+						$options[] = [
+							'text' => $line,
+							'data-title' => $line,
+						];
+					}
 
-		return $options;
-	}
+					return $options;
+				}
 
-	//lei description templates
-
-if (!function_exists('easy_invoice_get_description_templates')) {
-    function easy_invoice_get_description_templates()
-    {
-        $raw = get_option('easy_invoice_description_templates', '');
-        $lines = preg_split('/\r?\n/', trim($raw));
-        $templates = [];
-
-        foreach ($lines as $line) {
-            if (strpos($line, '|') === false) continue;
-            list($title, $html) = explode('|', $line, 2);
-            $templates[sanitize_title($title)] = [
-                'label'   => trim($title),
-                'content' => trim($html),
-            ];
-        }
-
-        return $templates;
-    }
-}
-
-}
-
-
+			}
 		endif;
 
 		return $price_array;
+	}
+}
+				//lei description templates
+if (!function_exists('easy_invoice_get_description_templates')) {
+	function easy_invoice_get_description_templates()
+	{
+		$raw = get_option('easy_invoice_description_templates', '');
+
+		error_log("[Templates Raw Option]\n" . $raw);
+
+		$lines = preg_split('/\r?\n/', trim($raw));
+		$templates = [];
+
+		foreach ($lines as $line) {
+			if (strpos($line, '|') === false) {
+				error_log("[Templates Skip] Malformed line: $line");
+				continue;
+			}
+
+			list($title, $html) = explode('|', $line, 2);
+			$key = sanitize_title($title);
+
+			$templates[$key] = [
+				'label'   => trim($title),
+				'content' => trim($html),
+			];
+		}
+
+		error_log("[Templates Parsed Keys] " . implode(', ', array_keys($templates)));
+
+		return $templates;
 	}
 }

@@ -59,6 +59,11 @@ class GeneralSettings extends Setting_Base
 		$settings = $this->get_settings($current_section);
 		Settings::save_fields($settings);
 
+		// ✅ Log the raw saved value
+		$raw = get_option('easy_invoice_description_templates', '');
+		error_log("[EasyInvoice] Saved 'easy_invoice_description_templates':\n" . $raw);
+
+
 		if ($current_section) {
 			do_action('easy_invoice_update_options_' . $this->id . '_' . $current_section);
 		}

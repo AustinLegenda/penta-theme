@@ -1,5 +1,6 @@
 // @var easyInvoiceAdminParams
 (function ($) {
+	
 	//lei drag handle
 	$(".easy-invoice-line-item").each(function () {
 		if ($(this).find(".lei-drag-handle").length === 0) {
@@ -286,22 +287,86 @@
 				wrap.find('.easy-invoice-section-title').val(title);
 				wrap.find('.matrixaddons-repeater-text').text(title); // ← Manually update display
 			});
+
 			//lei description template
-			document.addEventListener('DOMContentLoaded', function () {
-				const dropdown = document.getElementById('easy_invoice_selected_template');
-				const editor = window.tinymce?.get('easy_invoice_description');
+console.log('[EasyInvoice] Script loaded');
 
-				if (dropdown && editor) {
-					dropdown.addEventListener('change', function () {
-						const selected = dropdown.options[dropdown.selectedIndex];
-						const content = selected.getAttribute('data-content') || '';
-						if (content && editor.getContent({ format: 'raw' }).trim() === '') {
-							editor.setContent(content);
-						}
-					});
+const waitForSelect = setInterval(() => {
+	const select = document.getElementById('easy_invoice_selected_template');
+	if (!select) return;
+
+	clearInterval(waitForSelect);
+	console.log('[EasyInvoice] Template select found');
+
+	const raw = document.getElementById('easy_invoice_template_data')?.textContent;
+	if (!raw) {
+		console.warn('[EasyInvoice] No template data found.');
+		return;
+	}
+
+	let templates = {};
+	try {
+		templates = JSON.parse(raw);
+		console.log('[EasyInvoice] Parsed templates:', templates);
+	} catch (e) {
+		console.error('Invalid JSON in #easy_invoice_template_data');
+		return;
+	}
+
+	select.addEventListener('change', function () {
+		const key = this.value;
+		if (!key || !templates[key]) return;
+
+		console.log('[EasyInvoice] Template selected:', key);
+
+		const waitForEditor = setInterval(() => {
+			const editor = window.tinymce?.get('easy_invoice_description');
+			console.log('[EasyInvoice] Waiting for editor:', editor);
+
+			if (editor && typeof editor.setContent === 'function') {
+				clearInterval(waitForEditor);
+				console.log('[EasyInvoice] Injecting content:', templates[key]);
+				editor.setContent(templates[key]);
+			}
+		}, 300);
+	});
+}, 300);
+			//lei description templates
+			jQuery(document).ready(function ($) {
+				const $select = $('#easy_invoice_selected_template');
+				const $textarea = $('#easy_invoice_description');
+
+				// Step 1: Parse the JSON blob
+				let templates = {};
+				const raw = $('#easy_invoice_template_data').html();
+				if (raw) {
+					try {
+						templates = JSON.parse(raw);
+					} catch (e) {
+						console.error('Invalid template JSON:', e);
+					}
 				}
-			});
 
+				// Step 2: On select change, insert content
+				$select.on('change', function () {
+					const key = $(this).val();
+
+					if (!key || !templates[key]) return;
+
+					const content = templates[key];
+
+					// Update TinyMCE editor if available
+					const editor = typeof tinymce !== 'undefined' ? tinymce.get('easy_invoice_description') : null;
+
+					if (editor) {
+						editor.setContent(content);
+					} else {
+						// Fallback to textarea if TinyMCE isn't ready
+						$textarea.val(content);
+					}
+					
+				});
+			});
 
 		},
 		openFirstLineItem: function () {
@@ -561,4 +626,5 @@
 	$(document).ready(function () {
 		EasyInvoiceAdmin.init();
 	});
+	
 }(jQuery));

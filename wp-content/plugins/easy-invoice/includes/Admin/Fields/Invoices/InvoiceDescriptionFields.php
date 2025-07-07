@@ -6,82 +6,115 @@ use MatrixAddons\EasyInvoice\Admin\Fields\Base;
 
 class InvoiceDescriptionFields extends Base
 {
-    public function get_settings()
-    {
-        return [];
-    }
+	public function get_settings()
+	{
+		$templates = function_exists('easy_invoice_get_description_templates')
+			? easy_invoice_get_description_templates()
+			: [];
 
-    public function render()
-    {
-        global $post;
-        $post_id = $post->ID ?? 0;
+		$options = ['' => __('-- Select a template --', 'easy-invoice')];
+		foreach ($templates as $key => $tpl) {
+			$options[$key] = $tpl['label'];
+		}
 
-        $templates = function_exists('easy_invoice_get_description_templates')
-            ? easy_invoice_get_description_templates()
-            : [];
+		return [
+			'selected_template' => [
+				'title'   => __('Template', 'easy-invoice'),
+				'type'    => 'select',
+				'class'   => 'easy-invoice-description-templates',
+				'options' => $options,
+				'name' => '',
+			],
+			'description' => [
+				'type'  => 'editor',
+			],
+		];
+	}
 
-        $selected = get_post_meta($post_id, '_easy_invoice_selected_template', true);
+	public function save($post_data, $post_id)
+	{
+		if (empty($post_data) || !check_admin_referer($this->nonce_id(), $this->nonce_id() . '_nonce')) {
+			return;
+		}
 
-        echo '<p><label for="easy_invoice_selected_template">'
-            . esc_html__('Choose a template:', 'easy-invoice') . '</label> ';
-        echo '<select id="easy_invoice_selected_template" name="easy_invoice_selected_template">';
-        echo '<option value="">' . esc_html__('-- none --', 'easy-invoice') . '</option>';
-        foreach ($templates as $key => $tpl) {
-            printf(
-                '<option value="%1$s"%2$s data-content="%3$s">%4$s</option>',
-                esc_attr($key),
-                selected($selected, $key, false),
-                esc_attr($tpl['content']),
-                esc_html($tpl['label'])
-            );
-        }
-        echo '</select></p>';
+		// 1. Save selected template
+		$sel = isset($post_data['easy_invoice_selected_template'])
+			? sanitize_text_field(wp_unslash($post_data['easy_invoice_selected_template']))
+			: '';
+		update_post_meta($post_id, 'description', $sel);
 
-        $existing = $post->post_content ?? '';
-        $editor_content = (empty(trim($existing)) && $selected && isset($templates[$selected]))
-            ? $templates[$selected]['content']
-            : $existing;
+		// 2. Save description content into meta
+		if (isset($post_data['easy_invoice_description'])) {
+			$desc = wp_kses_post(wp_unslash($post_data['easy_invoice_description']));
+			update_post_meta($post_id, 'description', $desc);
+		}
+	}
 
-        wp_editor(
-            $editor_content,
-            'easy_invoice_description',
-            [
-                'textarea_name' => 'easy_invoice_description',
-                'media_buttons' => true,
-                'textarea_rows' => 10,
-            ]
-        );
+	public function render()
+	{
+		global $post;
+		$post_id = $post->ID ?? 0;
 
-        wp_nonce_field($this->nonce_id(), $this->nonce_id() . '_nonce');
-    }
+		// 1. Get templates from settings
+		$templates = function_exists('easy_invoice_get_description_templates')
+			? easy_invoice_get_description_templates()
+			: [];
 
-    public function nonce_id()
-    {
-        return 'easy_invoice_description_fields';
-    }
+		// 2. Get selected template
+		$selected = get_post_meta($post_id, '_easy_invoice_selected_template', true);
 
-    public function save($post_data, $post_id)
-    {
-        static $already_saved = false;
-        if ($already_saved) {
-            return;
-        }
-        $already_saved = true;
+		// 3. Get current content or fallback to template if no content
+		$existing_content = get_post_meta($post_id, '_easy_invoice_description', true);
+		if (empty($existing_content) && $selected && isset($templates[$selected])) {
+			$default_content = $templates[$selected]['content'];
+		} else {
+			$default_content = $existing_content;
+		}
 
-        parent::save($post_data, $post_id);
+		// 4. Render dropdown
+		echo '<p><label for="easy_invoice_selected_template">'
+			. esc_html__('Choose a description template:', 'easy-invoice')
+			. '</label><br />';
+		echo '<select id="easy_invoice_selected_template" name="easy_invoice_selected_template">';
+		echo '<option value="">' . esc_html__('-- Select a template --', 'easy-invoice') . '</option>';
 
-        if (isset($post_data['easy_invoice_selected_template'])) {
-            $sel = sanitize_text_field(wp_unslash($post_data['easy_invoice_selected_template']));
-            update_post_meta($post_id, '_easy_invoice_selected_template', $sel);
-        }
+		foreach ($templates as $key => $tpl) {
+			printf(
+				'<option value="%s"%s>%s</option>',
+				esc_attr($key),
+				selected($selected, $key, false),
+				esc_html($tpl['label'])
+			);
+		}
+		echo '</select></p>';
 
-        if (isset($_POST['easy_invoice_description'])) {
-            wp_update_post([
-                'ID'           => $post_id,
-                'post_content' => wp_kses_post(wp_unslash($_POST['easy_invoice_description'])),
-            ]);
-        }
+		// 5. Render the WP editor
+		wp_editor(
+			$default_content,
+			'easy_invoice_description',
+			[
+				'textarea_name' => 'easy_invoice_description',
+				'media_buttons' => true,
+				'textarea_rows' => 10,
+			]
+		);
 
-        $already_saved = false;
-    }
+		// 6. Inject JSON blob
+		$template_map = [];
+		foreach ($templates as $key => $tpl) {
+			$template_map[$key] = $tpl['content'];
+		}
+
+		echo '<script id="easy_invoice_template_data" type="application/json">'
+			. wp_json_encode($template_map)
+			. '</script>';
+
+		// 7. Nonce
+		wp_nonce_field($this->nonce_id(), $this->nonce_id() . '_nonce');
+	}
+
+	public function nonce_id()
+	{
+		return 'easy_invoice_description_fields';
+	}
 }
