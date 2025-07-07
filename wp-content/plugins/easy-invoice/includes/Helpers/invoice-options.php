@@ -120,6 +120,39 @@ if (!function_exists('easy_invoice_get_predefined_line_items')) {
 
 		return $options;
 	}
+
+	//lei description templates
+
+	if ( ! function_exists( 'easy_invoice_get_description_templates' ) ) {
+    /**
+     * Read the raw “Title|HTML” lines from the options
+     * and return a [ key => [label, content] ] map.
+     *
+     * @return array<string,array{label:string,content:string}>
+     */
+    function easy_invoice_get_description_templates() {
+        // 1) Fetch the raw blob
+        $raw   = get_option( 'easy_invoice_description_templates', '' );
+        // 2) Split into lines
+        $lines = preg_split( '/\r?\n/', trim( $raw ) );
+        $templates = [];
+
+        foreach ( $lines as $line ) {
+            if ( strpos( $line, '|' ) === false ) {
+                continue;
+            }
+            list( $title, $html ) = explode( '|', $line, 2 );
+            $key = sanitize_title( $title );
+            $templates[ $key ] = [
+                'label'   => trim( $title ),
+                'content' => trim( $html ),
+            ];
+        }
+
+        return $templates;
+    }
+}
+
 }
 
 

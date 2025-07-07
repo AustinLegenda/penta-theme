@@ -286,6 +286,18 @@
 				wrap.find('.easy-invoice-section-title').val(title);
 				wrap.find('.matrixaddons-repeater-text').text(title); // ← Manually update display
 			});
+			//lei description template
+			jQuery(function ($) {
+				$('#easy_invoice_selected_template').on('change', function () {
+					var content = $(this).find(':selected').data('content') || '';
+					// set TinyMCE (if active)
+					if (typeof tinyMCE !== 'undefined' && tinyMCE.get('easy_invoice_description')) {
+						tinyMCE.get('easy_invoice_description').setContent(content);
+					}
+					// set fallback textarea
+					$('#easy_invoice_description').val(content);
+				});
+			});
 
 
 		},

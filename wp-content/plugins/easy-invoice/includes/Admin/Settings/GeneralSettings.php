@@ -90,12 +90,40 @@ If you prefer to have an item blank, you still need the | symbol like so: 1 | So
 				'default' => '1 | Software Development | 150 | Development cost
 1 | Banner Design | 30 | Homepage Banner for the website'
 			),
-				array(
+			array(
 				'title' => __('Pre-Defined Section Headers', 'easy-invoice'),
 				'id' => 'easy_invoice_pre_defined_section_titles',
 				'desc' => __('Add one section header title per line', 'easy-invoice'),
 				'type' => 'textarea',
 				'default' => "Fees\nEquipment\nLocations\nCrew\nPost-Production"
+			),
+			array(
+				'title'   => __('Description Templates', 'easy-invoice'),
+				'id'      => 'easy_invoice_description_templates',
+				'desc'    => __(
+					'Add one template per line in the format:<br><code>Template Title | &lt;p&gt;Some HTML here&lt;/p&gt;</code>',
+					'easy-invoice'
+				),
+				'type'    => 'textarea',
+				'default' => '',
+				'allowed_html' => array(
+					'h1'     => array(),
+					'h2'     => array(),
+					'h3'     => array(),
+					'h4'     => array(),
+					'h5'     => array(),
+					'p'      => array(),
+					'strong' => array(),
+					'em'     => array(),
+					'br'     => array(),
+					'a'      => array(
+						'href'   => array(),
+						'target' => array(),
+					),
+					'ul'     => array(),
+					'ol'     => array(),
+					'li'     => array(),
+				),
 			),
 			array(
 				'type' => 'sectionend',

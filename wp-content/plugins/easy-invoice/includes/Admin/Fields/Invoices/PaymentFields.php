@@ -81,28 +81,28 @@ class PaymentFields extends Base
 
 	public function save($post_data, $post_id)
 	{
-		error_log('[PaymentFields] save() triggered');
+		//error_log('[PaymentFields] save() triggered');
 
 		if (empty($post_data) || !check_admin_referer($this->nonce_id(), $this->nonce_id() . '_nonce')) {
-			error_log('[PaymentFields] Nonce check failed or post_data is empty.');
+			//error_log('[PaymentFields] Nonce check failed or post_data is empty.');
 			return;
 		}
 
 		// Extract payment data
 		$payment_data = $post_data['easy_invoice_payment_items'] ?? [];
 		if (empty($payment_data)) {
-			error_log('[PaymentFields] No payment data submitted. Exiting.');
+			//error_log('[PaymentFields] No payment data submitted. Exiting.');
 			return;
 		}
 
 		// Check if paid_amount is greater than 0
 		$paid_amount = floatval($payment_data['paid_amount'] ?? 0);
 		if ($paid_amount <= 0) {
-			error_log('[PaymentFields] paid_amount is 0 or not set. Skipping payment creation.');
+			//error_log('[PaymentFields] paid_amount is 0 or not set. Skipping payment creation.');
 			return;
 		}
 
-		error_log('[PaymentFields] Payment detected. Proceeding with payment creation.');
+		//error_log('[PaymentFields] Payment detected. Proceeding with payment creation.');
 
 		// Retrieve invoice information
 		$invoice = new InvoiceRepository($post_id);

@@ -135,5 +135,7 @@ abstract class Setting_Base
             do_action('easy_invoice_update_options_' . $this->id . '_' . $current_section);
         }
     }
+
+    
 }
 
