@@ -698,6 +698,10 @@ class Settings {
                                     $repeator_value = call_user_func($value['value_callback']);
                                 }
                             }
+							//lei idk what this is
+							function easy_invoice_tour_tab_default_configurations(){
+								return [];
+							}
 							$repeator_value= is_array($repeator_value) ? $repeator_value : array();
 							$all_tab_configs = easy_invoice_tour_tab_default_configurations();
 							$all_tab_keys = array_keys($all_tab_configs);
