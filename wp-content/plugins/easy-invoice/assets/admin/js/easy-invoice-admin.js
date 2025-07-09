@@ -1,6 +1,6 @@
 // @var easyInvoiceAdminParams
 (function ($) {
-	
+
 	//lei drag handle
 	$(".easy-invoice-line-item").each(function () {
 		if ($(this).find(".lei-drag-handle").length === 0) {
@@ -288,50 +288,9 @@
 				wrap.find('.matrixaddons-repeater-text').text(title); // ← Manually update display
 			});
 
-			//lei description template
-console.log('[EasyInvoice] Script loaded');
 
-const waitForSelect = setInterval(() => {
-	const select = document.getElementById('easy_invoice_selected_template');
-	if (!select) return;
 
-	clearInterval(waitForSelect);
-	console.log('[EasyInvoice] Template select found');
-
-	const raw = document.getElementById('easy_invoice_template_data')?.textContent;
-	if (!raw) {
-		console.warn('[EasyInvoice] No template data found.');
-		return;
-	}
-
-	let templates = {};
-	try {
-		templates = JSON.parse(raw);
-		console.log('[EasyInvoice] Parsed templates:', templates);
-	} catch (e) {
-		console.error('Invalid JSON in #easy_invoice_template_data');
-		return;
-	}
-
-	select.addEventListener('change', function () {
-		const key = this.value;
-		if (!key || !templates[key]) return;
-
-		console.log('[EasyInvoice] Template selected:', key);
-
-		const waitForEditor = setInterval(() => {
-			const editor = window.tinymce?.get('easy_invoice_description');
-			console.log('[EasyInvoice] Waiting for editor:', editor);
-
-			if (editor && typeof editor.setContent === 'function') {
-				clearInterval(waitForEditor);
-				console.log('[EasyInvoice] Injecting content:', templates[key]);
-				editor.setContent(templates[key]);
-			}
-		}, 300);
-	});
-}, 300);
-			//lei description templates
+			//lei description templates - jQuery fallback
 			jQuery(document).ready(function ($) {
 				const $select = $('#easy_invoice_selected_template');
 				const $textarea = $('#easy_invoice_description');
@@ -350,25 +309,28 @@ const waitForSelect = setInterval(() => {
 				// Step 2: On select change, insert content
 				$select.on('change', function () {
 					const key = $(this).val();
-
 					if (!key || !templates[key]) return;
 
-					const content = templates[key];
-
-					// Update TinyMCE editor if available
+					const toAppend = templates[key];
 					const editor = typeof tinymce !== 'undefined' ? tinymce.get('easy_invoice_description') : null;
 
-					if (editor) {
-						editor.setContent(content);
+					if (editor && typeof editor.getContent === 'function') {
+						const current = editor.getContent();
+						const combined = current + toAppend;
+
+						editor.setContent(combined);
 					} else {
-						// Fallback to textarea if TinyMCE isn't ready
-						$textarea.val(content);
+						// Fallback to raw textarea
+						const current = $textarea.val();
+						$textarea.val(current + toAppend);
 					}
-					
+
+					// Reset the dropdown to default
+					$select.val('');
 				});
 			});
-
 		},
+		//end description templates
 		openFirstLineItem: function () {
 			$('.matrixaddons-repeater-wrapper').find('.matrixaddons-repeater-item').last().find('.matrixaddons-repeater-title').trigger('click');
 		},
@@ -626,5 +588,5 @@ const waitForSelect = setInterval(() => {
 	$(document).ready(function () {
 		EasyInvoiceAdmin.init();
 	});
-	
+
 }(jQuery));
