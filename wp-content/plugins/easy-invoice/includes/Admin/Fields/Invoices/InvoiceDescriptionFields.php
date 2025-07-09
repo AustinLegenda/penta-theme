@@ -41,12 +41,12 @@ class InvoiceDescriptionFields extends Base
 		$sel = isset($post_data['easy_invoice_selected_template'])
 			? sanitize_text_field(wp_unslash($post_data['easy_invoice_selected_template']))
 			: '';
-		update_post_meta($post_id, 'description', $sel);
+		update_post_meta($post_id, '_easy_invoice_selected_template', $sel);
 
-		// 2. Save description content into meta
+		// 2. Save description content to the expected key
 		if (isset($post_data['easy_invoice_description'])) {
 			$desc = wp_kses_post(wp_unslash($post_data['easy_invoice_description']));
-			update_post_meta($post_id, 'description', $desc);
+			update_post_meta($post_id, 'description', $desc); // <-- This is key
 		}
 	}
 
@@ -55,23 +55,26 @@ class InvoiceDescriptionFields extends Base
 		global $post;
 		$post_id = $post->ID ?? 0;
 
-		// 1. Get templates from settings
+		// 1. Get templates
 		$templates = function_exists('easy_invoice_get_description_templates')
 			? easy_invoice_get_description_templates()
 			: [];
 
-		// 2. Get selected template
+		// 2. Get saved values
 		$selected = get_post_meta($post_id, '_easy_invoice_selected_template', true);
+		$saved_description = get_post_meta($post_id, 'description', true); // FIXED key here
+		$post_content_fallback = get_post_field('post_content', $post_id);
 
-		// 3. Get current content or fallback to template if no content
-		$existing_content = get_post_meta($post_id, '_easy_invoice_description', true);
-		if (empty($existing_content) && $selected && isset($templates[$selected])) {
+		// 3. Decide what goes in the editor
+		if (!empty($saved_description)) {
+			$default_content = $saved_description;
+		} elseif (!empty($selected) && isset($templates[$selected])) {
 			$default_content = $templates[$selected]['content'];
 		} else {
-			$default_content = $existing_content;
+			$default_content = $post_content_fallback;
 		}
 
-		// 4. Render dropdown
+		// 4. Render template dropdown
 		echo '<p><label for="easy_invoice_selected_template">'
 			. esc_html__('Choose a description template:', 'easy-invoice')
 			. '</label><br />';
@@ -99,7 +102,7 @@ class InvoiceDescriptionFields extends Base
 			]
 		);
 
-		// 6. Inject JSON blob
+		// 6. Inject template JSON blob
 		$template_map = [];
 		foreach ($templates as $key => $tpl) {
 			$template_map[$key] = $tpl['content'];
