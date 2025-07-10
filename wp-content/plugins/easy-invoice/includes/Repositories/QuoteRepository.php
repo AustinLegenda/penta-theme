@@ -39,6 +39,16 @@ class QuoteRepository
 		return get_post_meta($this->quote_id, 'description', true);
 	}
 
+	public function get_business_name()
+	{
+		return get_post_meta($this->quote_id, 'business_name', true);
+	}
+
+	public function get_business_address()
+	{
+		return get_post_meta($this->quote_id, 'business_address', true);
+	}
+
 	public function get_client_email()
 	{
 		return get_post_meta($this->quote_id, 'client_email', true);
@@ -54,6 +64,10 @@ class QuoteRepository
 		return get_post_meta($this->quote_id, 'client_url', true);
 	}
 
+	public function get_client_number()
+	{
+		return get_post_meta($this->quote_id, 'client_number', true);
+	}
 
 	public function get_client_additional_info()
 	{

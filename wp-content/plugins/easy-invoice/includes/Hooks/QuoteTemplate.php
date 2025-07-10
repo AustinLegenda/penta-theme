@@ -19,15 +19,13 @@ class QuoteTemplate
 			return;
 		}
 
-		add_action('easy_invoice_before_container', array($this, 'top_bar'));
+	add_action('easy_invoice_before_container', array($this, 'top_bar'));
 
 		add_action('easy_invoice_content', array($this, 'header'), 15);
 
-		add_action('easy_invoice_content', array($this, 'after_header'), 20); //is here
+		add_action('easy_invoice_content', array($this, 'after_header'), 20);
 
 		add_action('easy_invoice_content', array($this, 'before_items_1'), 25);
-
-		//add_action('easy_invoice_content', array($this, 'contact_items'), 25);
 
 		add_action('easy_invoice_content', array($this, 'before_items_2'), 30);
 
@@ -69,25 +67,20 @@ class QuoteTemplate
 
 		easy_invoice_load_template('parts.header', array(
 			'logo_src' => $logo_src,
-			'details_data' => easy_invoice_get_quote_details_data() //load details data here instead
+			
 		));
 	}
 
-	public function after_header()
+		public function after_header()
 	{
 		echo '<div class="easy-invoice-content-area">';
 	}
 
-	//load contact info together instead
-	public function contact_items()
-	{
-		easy_invoice_load_template('parts.contact-items');
-	}
-
-	public function before_items_1() //before-items-1
+public function before_items_1()
 	{
 		easy_invoice_load_template('parts.before-items-1', array(
-			'title' => easy_invoice_get_quote_label(),
+			'details_data' => easy_invoice_get_quote_details_data(),
+				'title' => easy_invoice_get_quote_label()
 		));
 	}
 
