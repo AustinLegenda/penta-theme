@@ -38,6 +38,16 @@ class InvoiceRepository
 		return get_post_meta($this->invoice_id, 'description', true);
 	}
 
+	public function get_business_name()
+	{
+		return get_post_meta($this->invoice_id, 'business_name', true);
+	}
+
+	public function get_business_address()
+	{
+		return get_post_meta($this->invoice_id, 'business_address', true);
+	}
+
 	public function get_client_email()
 	{
 		return get_post_meta($this->invoice_id, 'client_email', true);
@@ -53,6 +63,10 @@ class InvoiceRepository
 		return get_post_meta($this->invoice_id, 'client_url', true);
 	}
 
+	public function get_client_number()
+	{
+		return get_post_meta($this->invoice_id, 'client_number', true);
+	}
 
 	public function get_client_additional_info()
 	{
@@ -264,7 +278,7 @@ class InvoiceRepository
 
 		return $due_amount; // Otherwise, return full due amount
 	}
-	
+
 	public function is_invoice_payable()
 	{
 		if (get_post_status($this->invoice_id) != 'publish') {

@@ -9,17 +9,29 @@ class ClientFields extends Base
 	public function get_settings()
 	{
 		return [
-			'client_email' => [
-				'type' => 'email',
-				'title' => __('Client Email', 'easy-invoice'),
+			'business_name' => [
+				'type' => 'text',
+				'title' => __('Business Name', 'easy-invoice'),
+			],
+			'business_address' => [
+				'type' => 'text',
+				'title' => __('Business Address', 'easy-invoice'),
+			],
+			'client_url' => [
+				'type' => 'text',
+				'title' => __('Website URL', 'easy-invoice'),
 			],
 			'client_name' => [
 				'type' => 'text',
 				'title' => __('Client Name', 'easy-invoice'),
 			],
-			'client_url' => [
+			'client_email' => [
+				'type' => 'email',
+				'title' => __('Client Email', 'easy-invoice'),
+			],
+			'client_number' => [
 				'type' => 'text',
-				'title' => __('Website URL', 'easy-invoice'),
+				'title' => __('Client Phone', 'easy-invoice'),
 			],
 			'additional_info' => [
 				'type' => 'textarea',
