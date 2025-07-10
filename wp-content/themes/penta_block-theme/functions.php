@@ -232,10 +232,10 @@ function legenda_custom_head_content() {
     echo '<meta charset="utf-8">' . "\n";
     echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">' . "\n";
     echo '<meta name="viewport" content="width=device-width, initial-scale=.9, maximum-scale=1.0, user-scalable=0" />' . "\n";
-    echo '<title>Legenda - Creative Production Services</title>' . "\n";
+    echo '<title>Legenda - Marketing Production</title>' . "\n";
     echo '<meta property="og:title" content="We combine in-camera experience and virtual design to bring your creative work to life.">' . "\n";
-    echo '<meta itemprop="name" content="Legenda - Marketing implementation and advertising production">' . "\n";
-    echo '<meta name="description" content="Legenda - Marketing implementation and advertising production studio. Our work encompasses photography, motion, websites and digital experiences, graphics and identity, products and packaging.">' . "\n";
+    echo '<meta itemprop="name" content="Legenda - Content production and creative services based in Jacksonville, Florida.">' . "\n";
+    echo '<meta name="description" content="Legenda - Marketing implementation and advertising production based in Jacksonville, Florida. Our work encompasses photography, motion, websites and digital experiences, graphics and identity, products and packaging.">' . "\n";
     echo '<meta property="og:url" content="' . esc_url( home_url() ) . '">' . "\n";
     echo '<meta property="og:image" content="">' . "\n";
     echo '<link rel="manifest" href="">' . "\n";
