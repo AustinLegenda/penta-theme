@@ -17,8 +17,7 @@ class ManualPaymentFields extends Base
                     'ach' => __('ACH', 'easy-invoice'),
                     'cash' => __('CASH', 'easy-invoice'),
                     'check' => __('Check', 'easy-invoice'),
-                    'venmo' => __('Venmo', 'easy-invoice'),
-                    'zelle' => __('Zelle', 'easy-invoice'),
+                    'payment_app' => __('Payment App', 'easy-invoice'),
 
                 ],
             ],
