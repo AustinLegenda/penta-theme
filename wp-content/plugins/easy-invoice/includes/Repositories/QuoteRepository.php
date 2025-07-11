@@ -84,7 +84,7 @@ class QuoteRepository
 		return get_post_meta($this->quote_id, 'quote_number', true);
 	}
 
-	public function get_order_number()
+	public function get_job_number()
 	{
 		return get_post_meta($this->quote_id, 'job_number', true);
 	}

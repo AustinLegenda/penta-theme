@@ -36,7 +36,7 @@ if (!function_exists('easy_invoice_get_invoice_details_data')) {
 			),
 			array(
 				'label' => easy_invoice_get_text('job_number'),
-				'value' => $ei_invoice->get_order_number(),
+				'value' => $ei_invoice->get_job_number(),
 			),
 			array(
 				'label' => easy_invoice_get_text('invoice_date'),
