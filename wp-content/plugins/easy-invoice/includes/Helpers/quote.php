@@ -112,7 +112,7 @@ if (!function_exists('easy_invoice_get_quote_details_data')) {
 			),
 			array(
 				'label' => easy_invoice_get_text('job_number'),
-				'value' => $ei_quote->get_order_number(),
+				'value' => $ei_quote->get_job_number(),
 			),
 			array(
 				'label' => easy_invoice_get_text('quote_date'),
