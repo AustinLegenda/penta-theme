@@ -85,35 +85,34 @@ if (!function_exists('easy_invoice_get_predefined_line_items')) {
 				$index++;
 			}
 
-			//lei predefined sections
-
-			if (!function_exists('easy_invoice_get_predefined_section_titles')) {
-				function easy_invoice_get_predefined_section_titles()
-				{
-					$headers_raw = get_option('easy_invoice_pre_defined_section_titles', "Production\nDesign\nPost-Production");
-					$lines = array_filter(array_map('trim', explode("\n", $headers_raw)));
-
-					$options = [
-						['text' => __('Add a pre-defined section title', 'easy-invoice')],
-					];
-
-					foreach ($lines as $line) {
-						$options[] = [
-							'text' => $line,
-							'data-title' => $line,
-						];
-					}
-
-					return $options;
-				}
-
-			}
 		endif;
 
 		return $price_array;
 	}
 }
-				//lei description templates
+//lei predefined sections
+
+if (!function_exists('easy_invoice_get_predefined_section_titles')) {
+	function easy_invoice_get_predefined_section_titles()
+	{
+		$headers_raw = get_option('easy_invoice_pre_defined_section_titles', "Production\nDesign\nPost-Production");
+		$lines = array_filter(array_map('trim', explode("\n", $headers_raw)));
+
+		$options = [
+			['text' => __('Add a pre-defined section title', 'easy-invoice')],
+		];
+
+		foreach ($lines as $line) {
+			$options[] = [
+				'text' => $line,
+				'data-title' => $line,
+			];
+		}
+
+		return $options;
+	}
+}
+//lei description templates
 if (!function_exists('easy_invoice_get_description_templates')) {
 	function easy_invoice_get_description_templates()
 	{
@@ -144,4 +143,3 @@ if (!function_exists('easy_invoice_get_description_templates')) {
 		return $templates;
 	}
 }
-
