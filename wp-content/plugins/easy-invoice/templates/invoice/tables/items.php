@@ -50,7 +50,8 @@ $line_items = $ei_invoice->get_line_items();
 								echo wp_kses_post(' <span style="color:#808080;"> (' . $description . '). </span>');
 							} else {
 								echo esc_html('.');
-							} ?> </td>
+							} ?> 
+							</td>
 						<td class="total right-text"><?php echo esc_html(easy_invoice_get_price($line_item->get_amount(), '', $ei_invoice->get_id())); ?></td>
 					</tr>
 				<?php } ?>
