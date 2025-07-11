@@ -151,6 +151,9 @@ class ListTable
 			case "invoice_number":
 				echo '<code style="font-size:15px;">' . esc_html($invoice_repository->get_invoice_number()) . '</code>';
 				break;
+					case "job_number":
+				echo '<code style="font-size:15px;">' . esc_html($invoice_repository->get_invoice_number()) . '</code>';
+				break;
 			case "client":
 				echo '<span>' . esc_html($invoice_repository->get_client_name()) . '</span>';
 				echo '<br/>';

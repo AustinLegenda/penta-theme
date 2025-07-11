@@ -28,7 +28,7 @@ class InvoiceFields extends Base
 				'title' => __('Invoice Number', 'easy-invoice'),
 				'default' => easy_invoice_get_invoice_number(),
 			],
-			'order_number' => [
+			'job_number' => [
 				'type' => 'text',
 				'title' => __('Job Number', 'easy-invoice'),
 			],

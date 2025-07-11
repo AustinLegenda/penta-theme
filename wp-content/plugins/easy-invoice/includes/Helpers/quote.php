@@ -111,7 +111,7 @@ if (!function_exists('easy_invoice_get_quote_details_data')) {
 				'value' => $ei_quote->get_quote_number(),
 			),
 			array(
-				'label' => easy_invoice_get_text('order_number'),
+				'label' => easy_invoice_get_text('job_number'),
 				'value' => $ei_quote->get_order_number(),
 			),
 			array(

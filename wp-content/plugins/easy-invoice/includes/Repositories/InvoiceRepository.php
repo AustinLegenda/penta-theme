@@ -85,7 +85,7 @@ class InvoiceRepository
 
 	public function get_order_number()
 	{
-		return get_post_meta($this->invoice_id, 'order_number', true);
+		return get_post_meta($this->invoice_id, 'job_number', true);
 	}
 
 	public function get_created_date()

@@ -9,7 +9,7 @@ if (!function_exists('easy_invoice_get_all_texts')) {
 			'from' => __('From', 'easy-invoice'),
 			'to' => __('To', 'easy-invoice'),
 			'invoice_number' => __('Invoice Number', 'easy-invoice'),
-			'order_number' => __('Job Number', 'easy-invoice'),
+			'job_number' => __('Job Number', 'easy-invoice'),
 			'invoice_date' => __('Invoice Date', 'easy-invoice'),
 			'due_date' => __('Due Date', 'easy-invoice'),
 			'total_due' => __('Total Due', 'easy-invoice'),

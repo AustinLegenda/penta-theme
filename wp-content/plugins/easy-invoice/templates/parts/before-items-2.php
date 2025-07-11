@@ -30,7 +30,7 @@
 
                     if ($label === easy_invoice_get_text('quote_number')) {
                         echo '<div class="quote-number lei-detail"><strong>' . esc_html($label) . ':</strong> ' . esc_html($value) . '</div>';
-                    } elseif ($label === easy_invoice_get_text('order_number')) {
+                    } elseif ($label === easy_invoice_get_text('job_number')) {
                         echo '<div class="order-number lei-detail"><strong>' . esc_html($label) . ':</strong> ' . esc_html($value) . '</div>';
                     } elseif ($label === easy_invoice_get_text('quote_date')) {
                         echo '<div class="quote-date lei-detail"><strong>' . esc_html($label) . ':</strong> ' . esc_html($value) . '</div>';
@@ -54,7 +54,7 @@
 
                     if ($label === easy_invoice_get_text('invoice_number')) {
                         echo '<div class="invoice-number lei-detail"><strong>' . esc_html($label) . ':</strong> ' . esc_html($value) . '</div>';
-                    } elseif ($label === easy_invoice_get_text('order_number')) {
+                    } elseif ($label === easy_invoice_get_text('job_number')) {
                         echo '<div class="order-number lei-detail"><strong>' . esc_html($label) . ':</strong> ' . esc_html($value) . '</div>';
                     } elseif ($label === easy_invoice_get_text('invoice_date')) {
                         echo '<div class="invoice-date lei-detail"><strong>' . esc_html($label) . ':</strong> ' . esc_html($value) . '</div>';

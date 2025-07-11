@@ -27,7 +27,7 @@ class QuoteFields extends Base
 				'title' => __('Estimate Number', 'easy-invoice'),
 				'default' => easy_invoice_get_quote_number(),
 			],
-			'order_number' => [
+			'job_number' => [
 				'type' => 'text',
 				'title' => __('Job Number', 'easy-invoice'),
 			],
