@@ -29,6 +29,10 @@ class ListTable
 		//lei sort payments by date
 		add_filter('manage_edit-easy-invoice-payment_sortable_columns', [$this, 'make_payment_columns_sortable']);
 		add_action('pre_get_posts', [$this, 'maybe_sort_by_payment_date']);
+
+		//lei sort Invoices by Job Number
+		add_filter('manage_edit-easy-invoice_sortable_columns', [$this, 'make_invoice_columns_sortable']);
+		add_action('pre_get_posts', [$this, 'maybe_sort_by_job_number']);
 	}
 
 	public function row_link($actions, $post)
@@ -128,6 +132,7 @@ class ListTable
 
 		unset($columns['date']);
 		$columns['invoice_number'] = __('Invoice Number', 'easy-invoice');
+		$columns['job_number'] = __('Job Number', 'easy-invoice');
 		$columns['client'] = __('Client', 'easy-invoice');
 		$columns['status'] = __('Status', 'easy-invoice');
 		$columns['due_date'] = __('Due Date', 'easy-invoice');
@@ -152,7 +157,7 @@ class ListTable
 				echo '<code style="font-size:15px;">' . esc_html($invoice_repository->get_invoice_number()) . '</code>';
 				break;
 					case "job_number":
-				echo '<code style="font-size:15px;">' . esc_html($invoice_repository->get_invoice_number()) . '</code>';
+				echo '<code style="font-size:15px;">' . esc_html($invoice_repository->get_job_number()) . '</code>';
 				break;
 			case "client":
 				echo '<span>' . esc_html($invoice_repository->get_client_name()) . '</span>';
@@ -181,7 +186,28 @@ class ListTable
 				break;
 		}
 	}
+//lei sort by Invoice by job numner
 
+	public function make_invoice_columns_sortable($columns)
+	{
+		$columns['job_number'] = 'job_number'; // column key => meta key
+		return $columns;
+	}
+
+	public function maybe_sort_by_job_number($query)
+	{
+		if (!is_admin() || !$query->is_main_query()) {
+			return;
+		}
+
+		if (
+			$query->get('post_type') === Constant::INVOICE_POST_TYPE &&
+			$query->get('orderby') === 'job_number'
+		) {
+			$query->set('meta_key', 'job_number');
+			$query->set('orderby', 'meta_value'); // or 'meta_value_num' if it's stored as a timestamp
+		}
+	}
 
 	public function invoice_payment_column($columns)
 	{

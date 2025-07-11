@@ -83,7 +83,7 @@ class InvoiceRepository
 		return get_post_meta($this->invoice_id, 'invoice_number', true);
 	}
 
-	public function get_order_number()
+	public function get_job_number()
 	{
 		return get_post_meta($this->invoice_id, 'job_number', true);
 	}
