@@ -99,7 +99,7 @@ if (!function_exists('easy_invoice_get_predefined_line_items')) {
 				$index++;
 			}
 
-			//lei predefined sections
+			//lei predefined section titles
 
 			if (!function_exists('easy_invoice_get_predefined_section_titles')) {
 				function easy_invoice_get_predefined_section_titles()
