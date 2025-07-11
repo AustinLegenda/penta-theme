@@ -11,6 +11,7 @@ class LineItemFields extends Base
 		$adjust_enable = easy_invoice_show_hide_adjust();
 		$adjust_type = $adjust_enable ? 'text' : 'hidden';
 		$pre_defined_line_items = easy_invoice_get_predefined_line_items();
+		$pre_defined_section_titles = easy_invoice_get_predefined_section_titles();
 
 		return [
 			'easy_invoice_line_items' => [
@@ -37,7 +38,7 @@ class LineItemFields extends Base
 					'pre_defined_section_headers' => [
 						'title' => __('Predefined Section Title', 'easy-invoice'),
 						'type' => 'select',
-						'options' => easy_invoice_get_predefined_section_titles(),
+						'options' => $pre_defined_section_titles,
 						'class' => 'easy-invoice-predefined-section-titles',
 						'name' => '',
 					],
