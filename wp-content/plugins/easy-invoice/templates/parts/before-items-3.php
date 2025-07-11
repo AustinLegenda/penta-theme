@@ -1,6 +1,4 @@
 <?php 
-error_log('[EasyInvoice] Template loaded: ' . __FILE__);
-
 $post_id = get_the_ID();
 
 $description = get_post_meta($post_id, 'description', true);

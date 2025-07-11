@@ -131,14 +131,14 @@ if (!function_exists('easy_invoice_get_description_templates')) {
 	{
 		$raw = get_option('easy_invoice_description_templates', '');
 
-		error_log("[Templates Raw Option]\n" . $raw);
+		//error_log("[Templates Raw Option]\n" . $raw);
 
 		$lines = preg_split('/\r?\n/', trim($raw));
 		$templates = [];
 
 		foreach ($lines as $line) {
 			if (strpos($line, '|') === false) {
-				error_log("[Templates Skip] Malformed line: $line");
+				//error_log("[Templates Skip] Malformed line: $line");
 				continue;
 			}
 
@@ -151,7 +151,7 @@ if (!function_exists('easy_invoice_get_description_templates')) {
 			];
 		}
 
-		error_log("[Templates Parsed Keys] " . implode(', ', array_keys($templates)));
+		//error_log("[Templates Parsed Keys] " . implode(', ', array_keys($templates)));
 
 		return $templates;
 	}
